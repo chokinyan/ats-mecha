@@ -1,0 +1,132 @@
+{
+  "types_liaisons": [
+    {
+      "id": "glissiere",
+      "nom": "Glissière",
+      "description": "Liaison permettant une translation selon un axe",
+      "degres_liberte": 1,
+      "mouvements_possibles": [
+        "Translation selon un axe"
+      ],
+      "mouvements_bloques": [
+        "Rotation",
+        "Translation selon 2 autres axes"
+      ],
+      "exemple": "Tiroir, piston sans rotation"
+    },
+    {
+      "id": "pivot",
+      "nom": "Pivot",
+      "description": "Liaison permettant une rotation autour d'un axe",
+      "degres_liberte": 1,
+      "mouvements_possibles": [
+        "Rotation autour d'un axe"
+      ],
+      "mouvements_bloques": [
+        "Translation",
+        "Rotation autour des 2 autres axes"
+      ],
+      "exemple": "Charnière de porte, roue fixe"
+    },
+    {
+      "id": "pivot_glissant",
+      "nom": "Pivot glissant",
+      "description": "Liaison combinant rotation et translation selon le même axe",
+      "degres_liberte": 2,
+      "mouvements_possibles": [
+        "Rotation autour d'un axe",
+        "Translation selon le même axe"
+      ],
+      "mouvements_bloques": [
+        "Translation selon 2 autres axes",
+        "Rotation autour des 2 autres axes"
+      ],
+      "exemple": "Arbre cannelé, vis dans un écrou"
+    },
+    {
+      "id": "helicoidale",
+      "nom": "Hélicoïdale",
+      "description": "Liaison où rotation et translation sont liées (type vis-écrou)",
+      "degres_liberte": 1,
+      "mouvements_possibles": [
+        "Rotation et translation couplées selon un axe"
+      ],
+      "mouvements_bloques": [
+        "Mouvements selon les autres axes"
+      ],
+      "exemple": "Système vis-écrou, vérin hélicoïdal"
+    },
+    {
+      "id": "spherique_rotule",
+      "nom": "Sphérique (Rotule)",
+      "description": "Liaison permettant 3 rotations autour d'un point fixe",
+      "degres_liberte": 3,
+      "mouvements_possibles": [
+        "Rotation autour de 3 axes"
+      ],
+      "mouvements_bloques": [
+        "Translation selon 3 axes"
+      ],
+      "exemple": "Rotule de suspension, joystick"
+    },
+    {
+      "id": "sphere_cylindre",
+      "nom": "Sphère-Cylindre (Linéaire Annulaire)",
+      "description": "Liaison permettant rotation autour de 2 axes et translation selon 1 axe",
+      "degres_liberte": 3,
+      "mouvements_possibles": [
+        "Rotation autour de 2 axes",
+        "Translation selon 1 axe"
+      ],
+      "mouvements_bloques": [
+        "Translation selon 2 axes",
+        "Rotation autour de 1 axe"
+      ],
+      "exemple": "Doigt dans un tube"
+    },
+    {
+      "id": "cylindre_plan",
+      "nom": "Cylindre-Plan (Linéaire Rectiligne)",
+      "description": "Liaison permettant rotation autour de 1 axe et translation selon 2 axes",
+      "degres_liberte": 3,
+      "mouvements_possibles": [
+        "Rotation autour de 1 axe",
+        "Translation selon 2 axes"
+      ],
+      "mouvements_bloques": [
+        "Translation selon 1 axe",
+        "Rotation autour de 2 axes"
+      ],
+      "exemple": "Cylindre sur plan"
+    },
+    {
+      "id": "appui_plan",
+      "nom": "Appui-Plan",
+      "description": "Liaison permettant 2 translations et 2 rotations dans un plan",
+      "degres_liberte": 4,
+      "mouvements_possibles": [
+        "Translation selon 2 axes",
+        "Rotation autour de 2 axes"
+      ],
+      "mouvements_bloques": [
+        "Translation selon 1 axe",
+        "Rotation autour de 1 axe"
+      ],
+      "exemple": "Semelle sur sol plat"
+    },
+    {
+      "id": "sphere_plan",
+      "nom": "Sphère-Plan (Ponctuelle)",
+      "description": "Liaison permettant 2 translations et 3 rotations",
+      "degres_liberte": 5,
+      "mouvements_possibles": [
+        "Translation selon 2 axes",
+        "Rotation autour de 3 axes"
+      ],
+      "mouvements_bloques": [
+        "Translation selon 1 axe (normale au plan)"
+      ],
+      "exemple": "Bille sur plan"
+    }
+  ]
+}

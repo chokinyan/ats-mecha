@@ -1,0 +1,749 @@
+{
+  "liaisons": [
+    {
+      "fichier": "l2glix.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "X",
+      "type_liaison": "Glissière",
+      "liaison": "Glissière",
+      "description": "Glissière direction X"
+    },
+    {
+      "fichier": "l2glix1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "X",
+      "type_liaison": "Glissière",
+      "liaison": "Glissière",
+      "description": "Glissière direction X"
+    },
+    {
+      "fichier": "l2gliy.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "Y",
+      "type_liaison": "Glissière",
+      "liaison": "Glissière",
+      "description": "Glissière direction Y"
+    },
+    {
+      "fichier": "l2gliy1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "Y",
+      "type_liaison": "Glissière",
+      "liaison": "Glissière",
+      "description": "Glissière direction Y"
+    },
+    {
+      "fichier": "l2gliz.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "Z",
+      "type_liaison": "Glissière",
+      "liaison": "Glissière",
+      "description": "Glissière direction Z"
+    },
+    {
+      "fichier": "l2gliz1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "Z",
+      "type_liaison": "Glissière",
+      "liaison": "Glissière",
+      "description": "Glissière direction Z"
+    },
+    {
+      "fichier": "l2helx.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "X",
+      "type_liaison": "Hélicoïdale",
+      "liaison": "Hélicoïdale",
+      "description": "Hélicoïdale d'axe (O;X)"
+    },
+    {
+      "fichier": "l2helx1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "X",
+      "type_liaison": "Hélicoïdale",
+      "liaison": "Hélicoïdale",
+      "description": "Hélicoïdale d'axe (O;X)"
+    },
+    {
+      "fichier": "l2hely.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "Y",
+      "type_liaison": "Hélicoïdale",
+      "liaison": "Hélicoïdale",
+      "description": "Hélicoïdale d'axe (O;Y)"
+    },
+    {
+      "fichier": "l2hely1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "Y",
+      "type_liaison": "Hélicoïdale",
+      "liaison": "Hélicoïdale",
+      "description": "Hélicoïdale d'axe (O;Y)"
+    },
+    {
+      "fichier": "l2helz.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "Z",
+      "type_liaison": "Hélicoïdale",
+      "liaison": "Hélicoïdale",
+      "description": "Hélicoïdale d'axe (O;Z)"
+    },
+    {
+      "fichier": "l2helz1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "Z",
+      "type_liaison": "Hélicoïdale",
+      "liaison": "Hélicoïdale",
+      "description": "Hélicoïdale d'axe (O;Z)"
+    },
+    {
+      "fichier": "l2linax.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "X",
+      "type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "description": "Sphère-Cylindre (Linéaire Annulaire) d'axe (O;X)"
+    },
+    {
+      "fichier": "l2linax1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "X",
+      "type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "description": "Sphère-Cylindre (Linéaire Annulaire) d'axe (O;X)"
+    },
+    {
+      "fichier": "l2linay.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "Y",
+      "type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "description": "Sphère-Cylindre (Linéaire Annulaire) d'axe (O;Y)"
+    },
+    {
+      "fichier": "l2linay1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "Y",
+      "type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "description": "Sphère-Cylindre (Linéaire Annulaire) d'axe (O;Y)"
+    },
+    {
+      "fichier": "l2linaz.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "Z",
+      "type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "description": "Sphère-Cylindre (Linéaire Annulaire) d'axe (O;Z)"
+    },
+    {
+      "fichier": "l2linaz1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "Z",
+      "type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "description": "Sphère-Cylindre (Linéaire Annulaire) d'axe (O;Z)"
+    },
+    {
+      "fichier": "l2linrxy.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "X",
+      "type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "description": "Cylindre-Plan (Linéaire Rectiligne) d'axe (O;X) normale Y",
+      "normale": "Y"
+    },
+    {
+      "fichier": "l2linrxy1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "X",
+      "type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "description": "Cylindre-Plan (Linéaire Rectiligne) d'axe (O;X) normale Y",
+      "normale": "Y"
+    },
+    {
+      "fichier": "l2linryz.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "Y",
+      "type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "description": "Cylindre-Plan (Linéaire Rectiligne) d'axe (O;Y) normale Z",
+      "normale": "Z"
+    },
+    {
+      "fichier": "l2linryz1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "Y",
+      "type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "description": "Cylindre-Plan (Linéaire Rectiligne) d'axe (O;Y) normale Z",
+      "normale": "Z"
+    },
+    {
+      "fichier": "l2linrzx.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "Z",
+      "type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "description": "Cylindre-Plan (Linéaire Rectiligne) d'axe (O;Z) normale X",
+      "normale": "X"
+    },
+    {
+      "fichier": "l2linrzx1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "Z",
+      "type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "description": "Cylindre-Plan (Linéaire Rectiligne) d'axe (O;Z) normale X",
+      "normale": "X"
+    },
+    {
+      "fichier": "l2piglx.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "X",
+      "type_liaison": "Pivot glissant",
+      "liaison": "Pivot glissant",
+      "description": "Pivot glissant d'axe (O;X)"
+    },
+    {
+      "fichier": "l2piglx1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "X",
+      "type_liaison": "Pivot glissant",
+      "liaison": "Pivot glissant",
+      "description": "Pivot glissant d'axe (O;X)"
+    },
+    {
+      "fichier": "l2pigly.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "Y",
+      "type_liaison": "Pivot glissant",
+      "liaison": "Pivot glissant",
+      "description": "Pivot glissant d'axe (O;Y)"
+    },
+    {
+      "fichier": "l2pigly1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "Y",
+      "type_liaison": "Pivot glissant",
+      "liaison": "Pivot glissant",
+      "description": "Pivot glissant d'axe (O;Y)"
+    },
+    {
+      "fichier": "l2piglz.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "Z",
+      "type_liaison": "Pivot glissant",
+      "liaison": "Pivot glissant",
+      "description": "Pivot glissant d'axe (O;Z)"
+    },
+    {
+      "fichier": "l2piglz1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "Z",
+      "type_liaison": "Pivot glissant",
+      "liaison": "Pivot glissant",
+      "description": "Pivot glissant d'axe (O;Z)"
+    },
+    {
+      "fichier": "l2pivx.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "X",
+      "type_liaison": "Pivot",
+      "liaison": "Pivot",
+      "description": "Pivot d'axe (O;X)"
+    },
+    {
+      "fichier": "l2pivx1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "X",
+      "type_liaison": "Pivot",
+      "liaison": "Pivot",
+      "description": "Pivot d'axe (O;X)"
+    },
+    {
+      "fichier": "l2pivy.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "Y",
+      "type_liaison": "Pivot",
+      "liaison": "Pivot",
+      "description": "Pivot d'axe (O;Y)"
+    },
+    {
+      "fichier": "l2pivy1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "Y",
+      "type_liaison": "Pivot",
+      "liaison": "Pivot",
+      "description": "Pivot d'axe (O;Y)"
+    },
+    {
+      "fichier": "l2pivz.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "Z",
+      "type_liaison": "Pivot",
+      "liaison": "Pivot",
+      "description": "Pivot d'axe (O;Z)"
+    },
+    {
+      "fichier": "l2pivz1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "Z",
+      "type_liaison": "Pivot",
+      "liaison": "Pivot",
+      "description": "Pivot d'axe (O;Z)"
+    },
+    {
+      "fichier": "l2plax.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "",
+      "type_liaison": "Appui-Plan",
+      "liaison": "Appui-Plan",
+      "description": "Appui-Plan normale X",
+      "normale": "X"
+    },
+    {
+      "fichier": "l2play.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "",
+      "type_liaison": "Appui-Plan",
+      "liaison": "Appui-Plan",
+      "description": "Appui-Plan normale Y",
+      "normale": "Y"
+    },
+    {
+      "fichier": "l2plaz.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "",
+      "type_liaison": "Appui-Plan",
+      "liaison": "Appui-Plan",
+      "description": "Appui-Plan normale Z",
+      "normale": "Z"
+    },
+    {
+      "fichier": "l2ponx.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "",
+      "type_liaison": "Sphère-Plan (Ponctuelle)",
+      "liaison": "Sphère-Plan (Ponctuelle)",
+      "description": "Sphère-Plan (Ponctuelle) en O normale X",
+      "normale": "X"
+    },
+    {
+      "fichier": "l2pony.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "",
+      "type_liaison": "Sphère-Plan (Ponctuelle)",
+      "liaison": "Sphère-Plan (Ponctuelle)",
+      "description": "Sphère-Plan (Ponctuelle) en O normale Y",
+      "normale": "Y"
+    },
+    {
+      "fichier": "l2ponz.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "",
+      "type_liaison": "Sphère-Plan (Ponctuelle)",
+      "liaison": "Sphère-Plan (Ponctuelle)",
+      "description": "Sphère-Plan (Ponctuelle) en O normale Z",
+      "normale": "Z"
+    },
+    {
+      "fichier": "l2rodx.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "X",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Sphérique (Rotule) à doigt",
+      "description": "Sphérique (Rotule) à doigt de centre O"
+    },
+    {
+      "fichier": "l2rody.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "Y",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Sphérique (Rotule) à doigt",
+      "description": "Sphérique (Rotule) à doigt de centre O"
+    },
+    {
+      "fichier": "l2rodz.jpg",
+      "dimension": "2D",
+      "variante": "",
+      "axe": "Z",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Sphérique (Rotule) à doigt",
+      "description": "Sphérique (Rotule) à doigt de centre O"
+    },
+    {
+      "fichier": "l2rot1.jpg",
+      "dimension": "2D",
+      "variante": "1",
+      "axe": "",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Liaison sphérique (ROTULE)",
+      "description": "Liaison sphérique (ROTULE) centre O"
+    },
+    {
+      "fichier": "l2rot2.jpg",
+      "dimension": "2D",
+      "variante": "2",
+      "axe": "",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Liaison sphérique (ROTULE)",
+      "description": "Liaison sphérique (ROTULE) centre O"
+    },
+    {
+      "fichier": "l2rot3.jpg",
+      "dimension": "2D",
+      "variante": "3",
+      "axe": "",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Liaison sphérique (ROTULE)",
+      "description": "Liaison sphérique (ROTULE) centre O"
+    },
+    {
+      "fichier": "l3glix.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "X",
+      "type_liaison": "Glissière",
+      "liaison": "Glissière",
+      "description": "Glissière direction X"
+    },
+    {
+      "fichier": "l3gliy.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "Y",
+      "type_liaison": "Glissière",
+      "liaison": "Glissière",
+      "description": "Glissière direction Y"
+    },
+    {
+      "fichier": "l3gliz.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "Z",
+      "type_liaison": "Glissière",
+      "liaison": "Glissière",
+      "description": "Glissière direction Z"
+    },
+    {
+      "fichier": "l3helx.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "X",
+      "type_liaison": "Hélicoïdale",
+      "liaison": "Hélicoïdale",
+      "description": "Hélicoïdale d'axe (O;X)"
+    },
+    {
+      "fichier": "l3hely.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "Y",
+      "type_liaison": "Hélicoïdale",
+      "liaison": "Hélicoïdale",
+      "description": "Hélicoïdale d'axe (O;Y)"
+    },
+    {
+      "fichier": "l3helz.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "Z",
+      "type_liaison": "Hélicoïdale",
+      "liaison": "Hélicoïdale",
+      "description": "Hélicoïdale d'axe (O;Z)"
+    },
+    {
+      "fichier": "l3linax.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "X",
+      "type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "description": "Sphère-Cylindre (Linéaire Annulaire) d'axe (O;X)"
+    },
+    {
+      "fichier": "l3linay.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "Y",
+      "type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "description": "Sphère-Cylindre (Linéaire Annulaire) d'axe (O;Y)"
+    },
+    {
+      "fichier": "l3linaz.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "Z",
+      "type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "description": "Sphère-Cylindre (Linéaire Annulaire) d'axe (O;Z)"
+    },
+    {
+      "fichier": "l3linrxy.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "X",
+      "type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "description": "Cylindre-Plan (Linéaire Rectiligne) d'axe (O;X) normale Y",
+      "normale": "Y"
+    },
+    {
+      "fichier": "l3linryz.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "Y",
+      "type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "description": "Cylindre-Plan (Linéaire Rectiligne) d'axe (O;Y) normale Z",
+      "normale": "Z"
+    },
+    {
+      "fichier": "l3linrzx.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "Z",
+      "type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "description": "Cylindre-Plan (Linéaire Rectiligne) d'axe (O;Z) normale X",
+      "normale": "X"
+    },
+    {
+      "fichier": "l3piglx.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "X",
+      "type_liaison": "Pivot glissant",
+      "liaison": "Pivot glissant",
+      "description": "Pivot glissant d'axe (O;X)"
+    },
+    {
+      "fichier": "l3pigly.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "Y",
+      "type_liaison": "Pivot glissant",
+      "liaison": "Pivot glissant",
+      "description": "Pivot glissant d'axe (O;Y)"
+    },
+    {
+      "fichier": "l3piglz.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "Z",
+      "type_liaison": "Pivot glissant",
+      "liaison": "Pivot glissant",
+      "description": "Pivot glissant d'axe (O;Z)"
+    },
+    {
+      "fichier": "l3pivx.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "X",
+      "type_liaison": "Pivot",
+      "liaison": "Pivot",
+      "description": "Pivot d'axe (O;X)"
+    },
+    {
+      "fichier": "l3pivy.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "Y",
+      "type_liaison": "Pivot",
+      "liaison": "Pivot",
+      "description": "Pivot d'axe (O;Y)"
+    },
+    {
+      "fichier": "l3pivz.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "Z",
+      "type_liaison": "Pivot",
+      "liaison": "Pivot",
+      "description": "Pivot d'axe (O;Z)"
+    },
+    {
+      "fichier": "l3plax.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "",
+      "type_liaison": "Appui-Plan",
+      "liaison": "Appui-Plan",
+      "description": "Appui-Plan normale X",
+      "normale": "X"
+    },
+    {
+      "fichier": "l3play.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "",
+      "type_liaison": "Appui-Plan",
+      "liaison": "Appui-Plan",
+      "description": "Appui-Plan normale Y",
+      "normale": "Y"
+    },
+    {
+      "fichier": "l3plaz.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "",
+      "type_liaison": "Appui-Plan",
+      "liaison": "Appui-Plan",
+      "description": "Appui-Plan normale Z",
+      "normale": "Z"
+    },
+    {
+      "fichier": "l3ponx.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "",
+      "type_liaison": "Sphère-Plan (Ponctuelle)",
+      "liaison": "Sphère-Plan (Ponctuelle)",
+      "description": "Sphère-Plan (Ponctuelle) en O normale X",
+      "normale": "X"
+    },
+    {
+      "fichier": "l3pony.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "",
+      "type_liaison": "Sphère-Plan (Ponctuelle)",
+      "liaison": "Sphère-Plan (Ponctuelle)",
+      "description": "Sphère-Plan (Ponctuelle) en O normale Y",
+      "normale": "Y"
+    },
+    {
+      "fichier": "l3ponz.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "",
+      "type_liaison": "Sphère-Plan (Ponctuelle)",
+      "liaison": "Sphère-Plan (Ponctuelle)",
+      "description": "Sphère-Plan (Ponctuelle) en O normale Z",
+      "normale": "Z"
+    },
+    {
+      "fichier": "l3rodx.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "X",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Sphérique (Rotule) à doigt",
+      "description": "Sphérique (Rotule) à doigt de centre O"
+    },
+    {
+      "fichier": "l3rody.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "Y",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Sphérique (Rotule) à doigt",
+      "description": "Sphérique (Rotule) à doigt de centre O"
+    },
+    {
+      "fichier": "l3rodz.jpg",
+      "dimension": "3D",
+      "variante": "",
+      "axe": "Z",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Sphérique (Rotule) à doigt",
+      "description": "Sphérique (Rotule) à doigt de centre O"
+    },
+    {
+      "fichier": "l3rot1.jpg",
+      "dimension": "3D",
+      "variante": "1",
+      "axe": "",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Liaison sphérique (ROTULE)",
+      "description": "Liaison sphérique (ROTULE) centre O"
+    },
+    {
+      "fichier": "l3rot2.jpg",
+      "dimension": "3D",
+      "variante": "2",
+      "axe": "",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Liaison sphérique (ROTULE)",
+      "description": "Liaison sphérique (ROTULE) centre O"
+    },
+    {
+      "fichier": "l3rot3.jpg",
+      "dimension": "3D",
+      "variante": "3",
+      "axe": "",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Liaison sphérique (ROTULE)",
+      "description": "Liaison sphérique (ROTULE) centre O"
+    }
+  ],
+  "metadata": {
+    "total_fichiers": 78,
+    "fichiers_2d": 48,
+    "fichiers_3d": 30,
+    "types_liaisons": [
+      "Glissière",
+      "Pivot",
+      "Pivot glissant",
+      "Hélicoïdale",
+      "Appui-Plan",
+      "Sphérique (Rotule)",
+      "Sphère-Cylindre (Linéaire Annulaire)",
+      "Cylindre-Plan (Linéaire Rectiligne)",
+      "Sphère-Plan (Ponctuelle)"
+    ],
+    "axes_possibles": [
+      "X",
+      "Y",
+      "Z"
+    ],
+    "pattern_nommage": "L[2|3][TYPE][AXE][VARIANTE].jpg"
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "torseurs": [
+    {
+      "fichier": "Archivecglix.jpg",
+      "type_liaison": "Glissière",
+      "liaison": "Glissière",
+      "description": "Glissière d'axe X",
+      "axe": "X"
+    },
+    {
+      "fichier": "Archivecgliy.jpg",
+      "type_liaison": "Glissière",
+      "liaison": "Glissière",
+      "description": "Glissière d'axe Y",
+      "axe": "Y"
+    },
+    {
+      "fichier": "Archivecgliz.jpg",
+      "type_liaison": "Glissière",
+      "liaison": "Glissière",
+      "description": "Glissière d'axe Z",
+      "axe": "Z"
+    },
+    {
+      "fichier": "Archivechelx.jpg",
+      "type_liaison": "Hélicoïdale",
+      "liaison": "Hélicoïdale",
+      "description": "Hélicoïdale d'axe X",
+      "axe": "X"
+    },
+    {
+      "fichier": "Archivechely.jpg",
+      "type_liaison": "Hélicoïdale",
+      "liaison": "Hélicoïdale",
+      "description": "Hélicoïdale d'axe Y",
+      "axe": "Y"
+    },
+    {
+      "fichier": "Archivechelz.jpg",
+      "type_liaison": "Hélicoïdale",
+      "liaison": "Hélicoïdale",
+      "description": "Hélicoïdale d'axe Z",
+      "axe": "Z"
+    },
+    {
+      "fichier": "Archiveclinax.jpg",
+      "type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "description": "Sphère-Cylindre d'axe X",
+      "axe": "X"
+    },
+    {
+      "fichier": "Archiveclinay.jpg",
+      "type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "description": "Sphère-Cylindre d'axe Y",
+      "axe": "Y"
+    },
+    {
+      "fichier": "Archiveclinaz.jpg",
+      "type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+      "description": "Sphère-Cylindre d'axe Z",
+      "axe": "Z"
+    },
+    {
+      "fichier": "Archiveclinrxy.jpg",
+      "type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "description": "Cylindre-Plan (Linéaire Rectiligne) d'axe (O;X) normale Y",
+      "axe": "X",
+      "normale": "Y"
+    },
+    {
+      "fichier": "Archiveclinryz.jpg",
+      "type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "description": "Cylindre-Plan (Linéaire Rectiligne) d'axe (O;Y) normale Z",
+      "axe": "Y",
+      "normale": "Z"
+    },
+    {
+      "fichier": "Archiveclinrzx.jpg",
+      "type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+      "description": "Cylindre-Plan (Linéaire Rectiligne) d'axe (O;Z) normale X",
+      "axe": "Z",
+      "normale": "X"
+    },
+    {
+      "fichier": "Archivecpiglx.jpg",
+      "type_liaison": "Pivot glissant",
+      "liaison": "Pivot glissant",
+      "description": "Pivot glissant d'axe X",
+      "axe": "X"
+    },
+    {
+      "fichier": "Archivecpigly.jpg",
+      "type_liaison": "Pivot glissant",
+      "liaison": "Pivot glissant",
+      "description": "Pivot glissant d'axe Y",
+      "axe": "Y"
+    },
+    {
+      "fichier": "Archivecpiglz.jpg",
+      "type_liaison": "Pivot glissant",
+      "liaison": "Pivot glissant",
+      "description": "Pivot glissant d'axe Z",
+      "axe": "Z"
+    },
+    {
+      "fichier": "Archivecpivx.jpg",
+      "type_liaison": "Pivot",
+      "liaison": "Pivot",
+      "description": "Pivot d'axe X",
+      "axe": "X"
+    },
+    {
+      "fichier": "Archivecpivy.jpg",
+      "type_liaison": "Pivot",
+      "liaison": "Pivot",
+      "description": "Pivot d'axe Y",
+      "axe": "Y"
+    },
+    {
+      "fichier": "Archivecpivz.jpg",
+      "type_liaison": "Pivot",
+      "liaison": "Pivot",
+      "description": "Pivot d'axe Z",
+      "axe": "Z"
+    },
+    {
+      "fichier": "Archivecplax.jpg",
+      "type_liaison": "Appui-Plan",
+      "liaison": "Appui-Plan",
+      "description": "Appui-Plan normale X",
+      "normale": "X"
+    },
+    {
+      "fichier": "Archivecplay.jpg",
+      "type_liaison": "Appui-Plan",
+      "liaison": "Appui-Plan",
+      "description": "Appui-Plan normale Y",
+      "normale": "Y"
+    },
+    {
+      "fichier": "Archivecplaz.jpg",
+      "type_liaison": "Appui-Plan",
+      "liaison": "Appui-Plan",
+      "description": "Appui-Plan normale Z",
+      "normale": "Z"
+    },
+    {
+      "fichier": "Archivecponx.jpg",
+      "type_liaison": "Sphère-Plan (Ponctuelle)",
+      "liaison": "Sphère-Plan (Ponctuelle)",
+      "description": "Sphère-Plan (Ponctuelle) en O normale X",
+      "normale": "X"
+    },
+    {
+      "fichier": "Archivecpony.jpg",
+      "type_liaison": "Sphère-Plan (Ponctuelle)",
+      "liaison": "Sphère-Plan (Ponctuelle)",
+      "description": "Sphère-Plan (Ponctuelle) en O normale Y",
+      "normale": "Y"
+    },
+    {
+      "fichier": "Archivecponz.jpg",
+      "type_liaison": "Sphère-Plan (Ponctuelle)",
+      "liaison": "Sphère-Plan (Ponctuelle)",
+      "description": "Sphère-Plan (Ponctuelle) en O normale Z",
+      "normale": "Z"
+    },
+    {
+      "fichier": "Archivecrodx.jpg",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Sphérique (Rotule)",
+      "description": "Sphérique (Rotule) à doigt",
+      "axe": "X"
+    },
+    {
+      "fichier": "Archivecrody.jpg",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Sphérique (Rotule)",
+      "description": "Sphérique (Rotule) à doigt",
+      "axe": "Y"
+    },
+    {
+      "fichier": "Archivecrodz.jpg",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Sphérique (Rotule)",
+      "description": "Sphérique (Rotule) à doigt",
+      "axe": "Z"
+    },
+    {
+      "fichier": "Archivecrot.jpg",
+      "type_liaison": "Sphérique (Rotule)",
+      "liaison": "Sphérique (Rotule)",
+      "description": "Sphérique (Rotule)",
+      "axe": ""
+    }
+  ],
+  "metadata": {
+    "total_torseurs": 28,
+    "types_liaisons": [
+      "Glissière",
+      "Pivot",
+      "Pivot glissant",
+      "Hélicoïdale",
+      "Sphérique (Rotule)",
+      "Sphère-Cylindre (Linéaire Annulaire)",
+      "Cylindre-Plan (Linéaire Rectiligne)",
+      "Appui-Plan",
+      "Sphère-Plan (Ponctuelle)"
+    ],
+    "pattern_nommage": "ArchiveC[TYPE][AXE].jpg",
+    "description": "Torseurs des liaisons mécaniques - Cours GM Prof. Bareux"
+  }
+}
