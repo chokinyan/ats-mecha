@@ -11,22 +11,23 @@ function App() {
       <main>
         <section>
           <h2>Schémas cinématiques</h2>
-          <Link to="/schema-cinematique">Schematisation 2D</Link>
-          <a href="#">Schematisation 3D</a>
-          <a href="#">Schematisation 2D et 3D</a>
+          <Link to="/schema-cinematique?types=2D">Schematisation 2D</Link>
+          <Link to="/schema-cinematique?types=3D">Schematisation 3D</Link>
+          <Link to="/schema-cinematique?types=2D et 3D">Schematisation 2D et 3D</Link>
         </section>
         <section>
           <h2>Torseurs</h2>
-          <a href="#">Torseur Cinematique</a>
+          <Link to="/torseurs">Torseur Cinematique</Link>
         </section>
         <section>
-          <h2>Tableaux</h2>
+          <h2>Tableaux des liaisons</h2>
           <p>À venir...</p>
         </section>
         <section>
           <h2>Questions de khole</h2>
           <p>À venir...</p>
         </section>
+        <h1></h1>
       </main>
     </>
   );

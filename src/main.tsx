@@ -2,6 +2,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import SchemaCinematique from './questionnaire/Schema-cinematique';
+import Finish from './questionnaire/Finish.tsx';
 
 createRoot(document.getElementById('root')!).render(
 	<Router>
@@ -9,8 +10,9 @@ createRoot(document.getElementById('root')!).render(
 			<Route path="/" element={<App />} />
 			<Route
 				path="schema-cinematique"
-				element={<SchemaCinematique types="2D" />}
+				element={<SchemaCinematique />}
 			/>
+			<Route path="finish" element={<Finish />} />
 		</Routes>
 	</Router>
 );
