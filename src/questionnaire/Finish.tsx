@@ -1,4 +1,6 @@
 import { useSearchParams, Link } from 'react-router-dom';
+import ReactGA from 'react-ga4';
+import { useEffect } from 'react';
 
 function Finish() {
 	const [searchParams] = useSearchParams();
@@ -15,6 +17,15 @@ function Finish() {
 	};
 
 	const percentage = Math.round((parseInt(score) / parseInt(total)) * 100);
+
+	useEffect(() => {
+		ReactGA.event({
+			category: 'Quiz',
+			action: 'completed',
+			label: quizType,
+			value: parseInt(score),
+		});
+	}, [quizType, score]);
 
 	return (
 		<div>
