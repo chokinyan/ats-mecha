@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 const root = createRoot(document.getElementById('root')!);
 export default function Main() {
 	useEffect(() => {
-		ReactGA.initialize('GTM-PS6R635Q'); // Remplace par ton Measurement ID
+		ReactGA.initialize('G-E13SL0PL8L'); // Remplace par ton Measurement ID
 		ReactGA.send('pageview'); // Track la page initiale
 	}, []);
 	return (
