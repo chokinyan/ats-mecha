@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Analytics } from "@vercel/analytics/react"
 import info from '../json/torseurs.json';
 
 type Torseur = {
@@ -233,6 +234,7 @@ function Torseur() {
 					</button>
 				</div>
 			</main>
+			<Analytics path={'/torseurs'} framework='react' />
 		</>
 	);
 }
