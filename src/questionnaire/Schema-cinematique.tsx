@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
-import { Analytics } from '@vercel/analytics/react';
 import info from '../json/liaisons_tableau.json';
 
 type Liaison = {
@@ -90,7 +89,6 @@ function SchemaCinematique() {
 
 	return (
 		<>
-			<Analytics path={'/schema-cinematique'} framework="react" />
 			<header>
 				<h2>Schéma Cinématique</h2>
 			</header>

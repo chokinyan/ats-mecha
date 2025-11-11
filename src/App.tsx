@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import './App.css';
-import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
 	return (
 		<>
+			<SpeedInsights />
 			<header>
 				<h1>Bienvenue sur un site pour réviser un peu de mécha</h1>
 			</header>
@@ -50,7 +51,6 @@ function App() {
 					». Je ne revendique aucun droit sur ces contenus originaux.
 				</small>
 			</footer>
-			<Analytics path={'/'} framework="react" />
 		</>
 	);
 }
