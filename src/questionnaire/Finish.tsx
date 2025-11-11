@@ -19,12 +19,21 @@ function Finish() {
 	const percentage = Math.round((parseInt(score) / parseInt(total)) * 100);
 
 	useEffect(() => {
-		ReactGA.event('quiz_completed', {
+		const eventData = {
 			quiz_type: quizType,
 			score: parseInt(score),
 			total: parseInt(total),
 			percentage: percentage,
+		};
+
+		ReactGA.event({
+			category: 'Quiz',
+			action: 'quiz_completed',
+			label: quizType,
+			value: percentage,
 		});
+
+		ReactGA.event('quiz_completed', eventData);
 	}, [quizType, score, total, percentage]);
 
 	return (
