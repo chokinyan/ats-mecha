@@ -7,6 +7,7 @@ import Torseur from './questionnaire/Torseur.tsx';
 import ReactGA from 'react-ga4';
 import { useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const root = createRoot(document.getElementById('root')!);
 export default function Main() {
@@ -17,6 +18,7 @@ export default function Main() {
 	return (
 		<>
 			<Analytics />
+			<SpeedInsights/>
 			<Router>
 				<Routes>
 					<Route path="/" element={<App />} />
