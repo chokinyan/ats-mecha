@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import info from '../json/torseurs.json';
+import info from '../asset/json/torseurs.json';
 
 type Torseur = {
 	fichier: string;
@@ -78,6 +78,11 @@ function Torseur() {
 
 	return (
 		<>
+			<head>
+				<title>
+					Torseurs Cinématiques - Question {questionNumber + 1}/10
+				</title>
+			</head>
 			<header>
 				<h2>Torseurs Cinématiques</h2>
 			</header>

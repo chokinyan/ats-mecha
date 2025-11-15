@@ -1,0 +1,44 @@
+{
+    "Chapitre 1 : Géometrie lois entrée sortie": [
+        {
+            "question": "Donner la valeur de 𝑐𝑜𝑠(𝑎) et 𝑠𝑖𝑛(𝑏) avec a et b dans angles usuelles du cercle trigonométrique",
+            "type": "math input",
+            "answer": {
+                "0": [
+                    "1",
+                    "0"
+                ],
+                "pi/6": [
+                    "sqrt(3)/2",
+                    "1/2"
+                ],
+                "pi/4": [
+                    "sqrt(2)/2",
+                    "sqrt(2)/2"
+                ],
+                "pi/3": [
+                    "1/2",
+                    "sqrt(3)/2"
+                ],
+                "pi/2": [
+                    "0",
+                    "1"
+                ],
+                "pi": [
+                    "-1",
+                    "0"
+                ]
+            }
+        },
+        {
+            "question": "Donner les relations de 𝑐𝑜𝑠(𝜃), 𝑐𝑜𝑠(𝜋/2 − 𝜃) , 𝑐𝑜𝑠(𝜋/2 + 𝜃) , 𝑐𝑜𝑠(−𝜃) en fonction de 𝜃.",
+            "type": "math input",
+            "answer": {
+                "𝑐𝑜𝑠(𝜃)": "cos(𝜃)",
+                "𝑐𝑜𝑠(𝜋/2 − 𝜃)": "sin(𝜃)",
+                "𝑐𝑜𝑠(𝜋/2 + 𝜃)": "-sin(𝜃)",
+                "𝑐𝑜𝑠(−𝜃)": "cos(𝜃)"
+            }
+        }
+    ]
+}

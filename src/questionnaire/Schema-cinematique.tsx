@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
-import info from '../json/liaisons_tableau.json';
+import info from '../asset/json/liaisons_tableau.json';
 
 type Liaison = {
 	fichier: string;
@@ -89,6 +89,11 @@ function SchemaCinematique() {
 
 	return (
 		<>
+			<head>
+				<title>
+					Schéma Cinématique - Question {questionNumber + 1}/10
+				</title>
+			</head>
 			<header>
 				<h2>Schéma Cinématique</h2>
 			</header>

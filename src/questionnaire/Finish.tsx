@@ -38,6 +38,9 @@ function Finish() {
 
 	return (
 		<div>
+			<head>
+				<title>Quiz Terminé !</title>
+			</head>
 			<header>
 				<h1>Quiz Terminé !</h1>
 			</header>
