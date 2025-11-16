@@ -1,43 +1,381 @@
 {
     "Chapitre 1 : Géometrie lois entrée sortie": [
         {
-            "question": "Donner la valeur de 𝑐𝑜𝑠(𝑎) et 𝑠𝑖𝑛(𝑏) avec a et b dans angles usuelles du cercle trigonométrique",
+            "question": "Donner\\ la\\ valeur\\ de\\ \\cos(a)\\ et\\ \\sin(b)\\ avec\\ a\\ et\\ b\\ dans\\ angles\\ usuelles\\ du\\ cercle\\ trigonométrique",
             "type": "math input",
             "answer": {
                 "0": [
                     "1",
                     "0"
                 ],
-                "pi/6": [
-                    "sqrt(3)/2",
-                    "1/2"
+                "\\frac{\\pi}{6}": [
+                    "\\frac{\\sqrt{3}}{2}",
+                    "\\frac{1}{2}"
                 ],
-                "pi/4": [
-                    "sqrt(2)/2",
-                    "sqrt(2)/2"
+                "\\frac{\\pi}{4}": [
+                    "\\frac{\\sqrt{2}}{2}",
+                    "\\frac{\\sqrt{2}}{2}"
                 ],
-                "pi/3": [
-                    "1/2",
-                    "sqrt(3)/2"
+                "\\frac{\\pi}{3}": [
+                    "\\frac{1}{2}",
+                    "\\frac{\\sqrt{3}}{2}"
                 ],
-                "pi/2": [
+                "\\frac{\\pi}{2}": [
                     "0",
                     "1"
                 ],
-                "pi": [
+                "\\pi": [
                     "-1",
                     "0"
                 ]
             }
         },
         {
-            "question": "Donner les relations de 𝑐𝑜𝑠(𝜃), 𝑐𝑜𝑠(𝜋/2 − 𝜃) , 𝑐𝑜𝑠(𝜋/2 + 𝜃) , 𝑐𝑜𝑠(−𝜃) en fonction de 𝜃.",
+            "question": "Donner les relations de cos(𝜃), cos(𝜋/2 − 𝜃) , cos(𝜋/2 + 𝜃) , cos(−𝜃) en fonction de 𝜃.",
             "type": "math input",
             "answer": {
-                "𝑐𝑜𝑠(𝜃)": "cos(𝜃)",
-                "𝑐𝑜𝑠(𝜋/2 − 𝜃)": "sin(𝜃)",
-                "𝑐𝑜𝑠(𝜋/2 + 𝜃)": "-sin(𝜃)",
-                "𝑐𝑜𝑠(−𝜃)": "cos(𝜃)"
+                "cos(𝜃)": "\\cos(\\theta)",
+                "cos(𝜋/2 − 𝜃)": "\\sin(\\theta)",
+                "cos(𝜋/2 + 𝜃)": "-\\sin(\\theta)",
+                "cos(−𝜃)": "\\cos(\\theta)"
+            }
+        },
+        {
+            "question": "Donner les relations de sin(𝜃), sin(𝜋/2 − 𝜃) , sin(𝜋/2 + 𝜃) , sin(−𝜃) en fonction de 𝜃.",
+            "type": "math input",
+            "answer": {
+                "sin(𝜃)": "\\sin(\\theta)",
+                "sin(𝜋/2 − 𝜃)": "\\cos(\\theta)",
+                "sin(𝜋/2 + 𝜃)": "-\\cos(\\theta)",
+                "sin(−𝜃)": "-\\sin(\\theta)"
+            }
+        },
+        {
+            "question": "Donner la relation du vecteur \\vec{x_{1}}, \\vec{y_{1}}, ou \\vec{z_{1}} dans la base \\vec{b_{2}} et \\vec{x_{2}}, \\vec{y_{2}} ou \\vec{z_{2}} dans la base \\vec{b_{1}}.",
+            "type": "math input",
+            "answer": {
+                "\\vec{x_{2}} dans b_{1}": "\\cos(\\alpha)\\vec{x_{1}} + \\sin(\\alpha)\\vec{y_{1}}",
+                "\\vec{y_{2}} dans b_{1}": "-\\sin(\\alpha)\\vec{x_{1}} + \\cos(\\alpha)\\vec{y_{1}}",
+                "\\vec{z_{2}} dans b_{1}": "\\vec{z_{1}}",
+                "\\vec{x_{1}} dans b_{2}": "\\cos(\\alpha)\\vec{x_{2}} - \\sin(\\alpha)\\vec{y_{2}}",
+                "\\vec{y_{1}} dans b_{2}": "\\sin(\\alpha)\\vec{x_{2}} + \\cos(\\alpha)\\vec{y_{2}}",
+                "\\vec{z_{1}} dans b_{2}": "\\vec{z_{2}}"
+            }
+        },
+        {
+            "question": "Soit \\vec{u} et \\vec{v} définies par leurs coordonnées (exemple : \\vec{u}(\\begin{matrix}1\\\\ 2\\\\ 3\\end{matrix})_{(x, y, z)} et \\vec{v}(\\begin{matrix}6\\\\ 7\\\\ 8\\end{matrix})_{(x, y, z)}). Calculer \\vec{u} \\cdot \\vec{v} et \\vec{u} \\wedge \\vec{v}. Que peut-on dire entre le vecteur \\vec{u} et \\vec{v}?",
+            "type": "math input/text",
+            "answer": {
+                "produit_scalaire": "44",
+                "produit_vectoriel": "\\begin{pmatrix}-5\\\\ 10\\\\ -5\\end{pmatrix}",
+                "relation_entre_vecteurs": "Les vecteurs ne sont pas colinéaires car le produit vectoriel est non nul, et ils ne sont pas orthogonaux car le produit scalaire est non nul."
+            }
+        },
+        {
+            "question": "Donner la définition de la norme d'un vecteur.",
+            "type": "math input",
+            "answer": {
+                "norme": "Si \\vec{V}=\\lambda\\cdot\\vec{x}+\\mu\\cdot\\vec{y}+\\tau\\cdot\\vec{z}, alors ||\\vec{V}|| = \\sqrt{\\lambda^{2} + \\mu^{2} + \\tau^{2}}"
+            }
+        },
+        {
+            "question": "Quelle différence faites-vous entre base et repère ?",
+            "type": "text",
+            "answer": "Une base (e.g., $(\\vec{x},\\vec{y},\\vec{z})$) est un ensemble de vecteurs définissant l'orientation et les directions de l'espace[cite: 947, 949]. Un repère cartésien orthonormé (e.g., $(O, \\vec{x}, \\vec{y}, \\vec{z})$) est un quadruplet qui ajoute un point d'origine $O$ à la base, permettant de localiser des points dans l'espace[cite: 975]."
+        },
+        {
+            "question": "Donner la différence entre la position et la trajectoire d'un point $M$ d'un solide $i$ par rapport au repère $R_{j}$.",
+            "type": "text",
+            "answer": "La position d'un point $M$ d'un solide $S_{i}$ par rapport à un repère $R_{i}$ est définie par le vecteur $\\vec{O_{i}M}$[cite: 1103]. La trajectoire de $M$ par rapport au repère $R_{i}$ est l'ensemble des positions successives du point $M$ dans ce repère[cite: 1104]."
+        },
+        {
+            "question": "Pour chaque type de coordonnées (Cylindrique et sphérique) représenter les paramètres du point $M$ dans le repère liés au type de coordonnées et retrouver l'expression des coordonnées du point $M$ en coordonnées cartésiennes.",
+            "type": "math input",
+            "answer": {
+                "coordonnees_cylindriques": "$\\vec{O_{i}M} = r \\vec{e_r} + z_M \\vec{e_z}$. En coordonnées cartésiennes : $x_M = r \\cos(\\theta)$, $y_M = r \\sin(\\theta)$, $z_M = z_M$[cite: 1128, 1138, 1140].",
+                "coordonnees_spheriques": "$\\vec{O_{i}M} = r \\vec{e_r}$ (où $\\vec{e_r}$ est le vecteur unitaire radial). En coordonnées cartésiennes : $x_M = r \\sin(\\psi) \\cos(\\theta)$, $y_M = r \\sin(\\psi) \\sin(\\theta)$, $z_M = r \\cos(\\psi)$[cite: 1145, 1148]."
+            }
+        },
+        {
+            "question": "Soit $M$ un point appartenant à la roue d'un vélo se déplaçant sur une route horizontale: Donner la trajectoire du point $M$ par rapport à la roue. Donner la trajectoire du point $M$ par rapport au cadre du vélo.",
+            "type": "text",
+            "answer": "La trajectoire du point $M$ par rapport à la roue (dans le repère lié à la roue, $R_2$) est un point (car $M$ est fixe dans la roue)[cite: 1110, 1250]. La trajectoire du point $M$ par rapport au cadre du vélo (dans le repère lié au cadre, $R_1$) est un cercle centré sur $O_1$ (l'axe de la roue)[cite: 1111, 1251]. La trajectoire par rapport au sol ($R_0$) est une cycloïde[cite: 1114]."
+        }
+    ],
+    "Chapitre 2 : Analyse Système": [
+        {
+            "question": "Que signifie l'acronyme: IBD, BDD, UC, STM, REQ, SD.",
+            "type": "text",
+            "answer": {
+                "IBD": "Internal Block Diagram (Diagramme de blocs internes)[cite: 652].",
+                "BDD": "Block Definition Diagram (Diagramme de définition des blocs)[cite: 605].",
+                "UC": "Use Cases (Diagramme de cas d'utilisation)[cite: 564].",
+                "STM": "State Machine (Diagramme d'états)[cite: 707].",
+                "REQ": "Requirements (Diagramme des exigences)[cite: 530].",
+                "SD": "Sequence Diagram (Diagramme de séquence)[cite: 732]."
+            }
+        },
+        {
+            "question": "Donner deux types de diagrammes fonctionnels.",
+            "type": "text",
+            "answer": [
+                "Diagramme des exigences [cite: 525]",
+                "Diagramme des cas d'utilisation (Use Cases) [cite: 526]"
+            ]
+        },
+        {
+            "question": "Donner deux types de diagrammes structurels.",
+            "type": "text",
+            "answer": [
+                "Diagramme de définition des blocs (BDD) [cite: 528]",
+                "Diagramme des blocs internes (IBD) [cite: 528]",
+                "Diagramme paramétrique (PAR) [cite: 528]"
+            ]
+        },
+        {
+            "question": "Donner deux types de diagrammes comportementaux.",
+            "type": "text",
+            "answer": [
+                "Diagramme d'états (STM) [cite: 529]",
+                "Diagramme de séquences (SD) [cite: 529]"
+            ]
+        },
+        {
+            "question": "Comment est représenté l'état final et l'état initial, une transition ou un état sur une diagramme d'états ?",
+            "type": "text",
+            "answer": {
+                "etat_initial": "Cercle noir plein [cite: 709, 716]",
+                "etat_final": "Cercle noir plein dans un autre cercle vide [cite: 710, 716]",
+                "etat": "Rectangle aux coins arrondis [cite: 711, 716]",
+                "transition": "Flèche avec un événement (et optionnellement une condition et un effet) [cite: 712]"
+            }
+        },
+        {
+            "question": "Quel sont les différences entre un lien « Include » et « Extend » dans un UC ?",
+            "type": "text",
+            "answer": {
+                "include": "Le cas d'utilisation de base incorpore systématiquement celui placé à l'extrémité de la flèche[cite: 595].",
+                "extend": "Le cas d'utilisation de base peut (optionnellement) inclure l'extension, le cas d'utilisation d'extension étant placé à l'extrémité de la flèche[cite: 592]."
+            }
+        },
+        {
+            "question": "Que représente la cardinalité sur un BDD ?",
+            "type": "text",
+            "answer": "La cardinalité ou multiplicité représente le nombre de sous-blocs possédant les mêmes caractéristiques. Cela permet d'éviter de tous les représenter individuellement[cite: 632]."
+        }
+    ],
+    "Chapitre 3 : Transmission de Puissance": [
+        {
+            "question": "Soit système Pignon crémaillère, donner la relation entre V, R et 𝜔.",
+            "type": "math input",
+            "answer": {
+                "relation_vitesse": "$V = R \\cdot \\omega$ (où $V$ est la vitesse de translation de la crémaillère, $R$ est le rayon primitif du pignon, et $\\omega$ est la vitesse de rotation du pignon)[cite: 84]."
+            }
+        },
+        {
+            "question": "Donner la relation définissant la puissance d'un réducteur qui a une vitesse de rotation $\\omega_{s}$ et un couple résistant de sortie $C_{s}$.",
+            "type": "math input",
+            "answer": {
+                "puissance_sortie": "$P_s = C_s \\cdot \\omega_s$"
+            }
+        },
+        {
+            "question": "Donner le rapport de réduction d'un engrenage.",
+            "type": "math input",
+            "answer": {
+                "rapport_reduction_engrenage": "$r = \\frac{\\omega_s}{\\omega_e} = (-1)^{n} \\cdot \\frac{D_e}{D_s} = (-1)^{n} \\cdot \\frac{Z_e}{Z_s}$ (où $\\omega$ est la vitesse de rotation, $D$ le diamètre primitif, $Z$ le nombre de dents, $e$ l'entrée, $s$ la sortie, et $n$ le nombre de contacts extérieurs)[cite: 304, 388]."
+            }
+        },
+        {
+            "question": "Donner le rapport de réduction d'un système poulie/courroie.",
+            "type": "math input",
+            "answer": {
+                "rapport_reduction_poulie_courroie": "$r = \\frac{\\omega_s}{\\omega_e} = \\frac{R_e}{R_s} = \\frac{D_e}{D_s}$ (où $R$ est le rayon, $D$ le diamètre, $e$ l'entrée, $s$ la sortie. Le sens de rotation est le même)[cite: 197]."
+            }
+        },
+        {
+            "question": "Donner le rapport de réduction de ce système roue/vis sans fin, on donne $Z_{vis}$ Nombre filets de la vis et $Z_{roue}$ Nombre dents de la roue.",
+            "type": "math input",
+            "answer": {
+                "rapport_reduction_vis_sans_fin": "$r = \\frac{\\omega_{roue}}{\\omega_{vis}} = \\frac{Z_{vis}}{Z_{roue}}$ (où $Z_{vis}$ est le nombre de filets de la vis et $Z_{roue}$ est le nombre de dents de la roue)[cite: 363, 364, 400]."
+            }
+        },
+        {
+            "question": "Donner la relation entre $\\lambda$ (longueur de translation), $\\varphi$ (angle de rotation de la vis) et $p$ (pas de la vis).",
+            "type": "math input",
+            "answer": {
+                "relation_vis_ecrou": "$\\lambda = p \\cdot \\frac{\\varphi}{2\\pi}$ (où $\\lambda$ est la translation, $p$ le pas, et $\\varphi$ l'angle de rotation en radians)[cite: 55]."
+            }
+        },
+        {
+            "question": "Donner le nom du système (tous les systèmes du cours: vis/écrou, bielle manivelle, pignon/crémaillère, croix de malte, système à came ou excentrique, joint de transmission...), le type de transformation de mouvement, et sa réversibilité.",
+            "type": "text/table",
+            "answer": [
+                {
+                    "système": "Vis-écrou [cite: 52]",
+                    "type_transformation": "Rotation continue en translation continue [cite: 53]",
+                    "réversibilité": "Parfois (souvent irréversible sans éléments roulants) [cite: 56]"
+                },
+                {
+                    "système": "Bielle-manivelle [cite: 62]",
+                    "type_transformation": "Rotation continue en translation alternative ou l'inverse [cite: 64]",
+                    "réversibilité": "Oui [cite: 65]"
+                },
+                {
+                    "système": "Pignon-crémaillère [cite: 78]",
+                    "type_transformation": "Rotation continue en translation alternative [cite: 81]",
+                    "réversibilité": "Oui [cite: 82]"
+                },
+                {
+                    "système": "Croix de Malte [cite: 88]",
+                    "type_transformation": "Rotation continue en rotation intermittente [cite: 89]",
+                    "réversibilité": "Jamais [cite: 90]"
+                },
+                {
+                    "système": "Came ou Excentrique [cite: 93]",
+                    "type_transformation": "Rotation continue en translation alternative [cite: 95]",
+                    "réversibilité": "Jamais [cite: 96]"
+                },
+                {
+                    "système": "Joints de transmission/Accouplements (Cardan, Tripode, Rzeppa) [cite: 132]",
+                    "type_transformation": "Transmission de rotation (avec/sans homocinétisme) [cite: 133, 134]",
+                    "réversibilité": "Oui"
+                }
+            ]
+        }
+    ],
+    "Chapitre 4 : Cinématique des Mouvements": [
+        {
+            "question": "Donner la position du point $M$ par rapport à un repère.",
+            "type": "math input",
+            "answer": {
+                "position": "La position est définie par le vecteur position $\\vec{OM}$ (où $O$ est l'origine du repère)[cite: 1103]."
+            }
+        },
+        {
+            "question": "Donner la vitesse d’un point $M$ par rapport à un référentiel.",
+            "type": "math input",
+            "answer": {
+                "vitesse": "Le vecteur vitesse $\\vec{V}(M/R)$ est la dérivée du vecteur position $\\vec{OM}$ par rapport au temps dans le référentiel $R$: $\\vec{V}(M/R) = \\frac{d\\vec{OM}}{dt}|_R$."
+            }
+        },
+        {
+            "question": "Donner l’accélération d’un point $M$ par rapport à un référentiel.",
+            "type": "math input",
+            "answer": {
+                "acceleration": "Le vecteur accélération $\\vec{a}(M/R)$ est la dérivée du vecteur vitesse $\\vec{V}(M/R)$ par rapport au temps dans le référentiel $R$: $\\vec{a}(M/R) = \\frac{d\\vec{V}(M/R)}{dt}|_R$."
+            }
+        },
+        {
+            "question": "Donner la relation du vecteur accélération du point $P$ appartenant à $S$ par rapport à $R$ en fonction du vecteur vitesse de $P$ appartenant à $S$ par rapport à $R$.",
+            "type": "math input",
+            "answer": {
+                "relation_acceleration_vitesse": "$\\vec{a}(P \\in S/R) = \\frac{d\\vec{V}(P \\in S/R)}{dt}|_R$."
+            }
+        },
+        {
+            "question": "Donner la relation qui lie les vitesses des points $A$ et $B$ d’un même solide $S$.",
+            "type": "math input",
+            "answer": {
+                "equiprojectivite": "$\\vec{V}(B/R) = \\vec{V}(A/R) + \\vec{\\Omega}(S/R) \\wedge \\vec{AB}$ (Champ des vitesses d'un solide en mouvement quelconque)."
+            }
+        },
+        {
+            "question": "Donner la relation entre la vitesse absolue, relative et d’entraînement d’un point $M$.",
+            "type": "math input",
+            "answer": {
+                "composition_vitesse": "$\\vec{V}_{absolue}(M) = \\vec{V}_{relative}(M) + \\vec{V}_{entrainement}(M)$ (où $\\vec{V}(M/R_{absolu}) = \\vec{V}(M/R_{relatif}) + \\vec{V}(M \\in R_{relatif}/R_{absolu})$)."
+            }
+        },
+        {
+            "question": "Donner la relation entre la vitesse du point $M$ appartenant à $R_1/R_2$ et celle du point $M$ appartenant à $R_2/R_1$.",
+            "type": "math input",
+            "answer": {
+                "vitesse_relative": "$\\vec{V}(M/R_1) = -\\vec{V}(M/R_2)$ (valable uniquement si $R_1$ et $R_2$ sont liés à un même point $M$ ? *Attention, si $R_1$ et $R_2$ sont deux repères, $\\vec{V}(M/R_1)$ est généralement différent de $-\\vec{V}(M/R_2)$. En cinématique générale, on a $\\vec{V}(M \\in S_1/S_2) = -\\vec{V}(M \\in S_2/S_1)$*)."
+            }
+        },
+        {
+            "question": "Donner la vitesse du point $P$ appartenant à $S_2$ par rapport à $S_1$ s’il y a roulement sans glissement entre $S_1$ et $S_2$ au point $P$.",
+            "type": "math input",
+            "answer": {
+                "roulement_sans_glissement": "$\\vec{V}(P \\in S_2/S_1) = \\vec{0}$ (Le point de contact $P$ est appelé centre instantané de rotation. Sa vitesse relative entre les deux solides est nulle)."
+            }
+        },
+        {
+            "question": "Donner la relation de la dérivée d’un vecteur quelconque par rapport à deux bases $b_f$ et $b_i$ dont la vitesse de rotation de $b_i$ par rapport à $b_f$ vaut $\\vec{\\Omega}_{b_i/b_f}$.",
+            "type": "math input",
+            "answer": {
+                "derivee_vecteur_base": "$\\frac{d\\vec{u}}{dt}|_{b_f} = \\frac{d\\vec{u}}{dt}|_{b_i} + \\vec{\\Omega}_{b_i/b_f} \\wedge \\vec{u}$."
+            }
+        },
+        {
+            "question": "Soit : [Image d'un repère $R_1(\\vec{x_{1}}, \\vec{y_{1}})$ tourné d'un angle $\\alpha$ par rapport à $R(\\vec{x}, \\vec{y})$] donner $\\frac{d\\vec{y_1}}{dt}|_0$ et $\\frac{d\\vec{x_1}}{dt}|_0$.",
+            "type": "math input",
+            "answer": {
+                "derivee_vecteurs": "$\\frac{d\\vec{x_1}}{dt}|_0 = \\dot{\\alpha} \\vec{z} \\wedge \\vec{x_1} = \\dot{\\alpha} \\vec{y_1}$ et $\\frac{d\\vec{y_1}}{dt}|_0 = \\dot{\\alpha} \\vec{z} \\wedge \\vec{y_1} = -\\dot{\\alpha} \\vec{x_1}$ (où $\\vec{z}$ est perpendiculaire au plan $x-y$). La vitesse de rotation de $R_1/R$ est $\\vec{\\Omega}_{R_1/R} = \\dot{\\alpha} \\vec{z}$."
+            }
+        },
+        {
+            "question": "Donner la relation entre la vitesse instantanée de rotation du point $M$ appartenant à $R_1/R_2$ et celle du point $M$ appartenant à $R_2/R_1$.",
+            "type": "math input",
+            "answer": {
+                "rotation_relative": "$\\vec{\\Omega}(R_1/R_2) = -\\vec{\\Omega}(R_2/R_1)$."
+            }
+        },
+        {
+            "question": "Démontrer les équations du mouvement d’un point $M$ en translation rectiligne.",
+            "type": "math input",
+            "answer": {
+                "translation_rectiligne": "Avec $x(t)$ la position, $v(t)$ la vitesse, $a(t)$ l'accélération : $v(t) = \\frac{dx(t)}{dt}$ et $a(t) = \\frac{dv(t)}{dt} = \\frac{d^2x(t)}{dt^2}$."
+            }
+        },
+        {
+            "question": "Donner les équation et graphes pour un mouvement rectiligne uniforme et un mouvement rectiligne uniformément varié.",
+            "type": "math input",
+            "answer": {
+                "mru": "Mouvement rectiligne uniforme ($a(t)=0$): $v(t) = v_0$, $x(t) = v_0 t + x_0$.",
+                "mruv": "Mouvement rectiligne uniformément varié ($a(t)=a_0$ = constante): $v(t) = a_0 t + v_0$, $x(t) = \\frac{1}{2} a_0 t^2 + v_0 t + x_0$."
+            }
+        },
+        {
+            "question": "Donner la relation entre $x(t)$ et $v(t)$ sans la variable $t$.",
+            "type": "math input",
+            "answer": {
+                "theoreme_energie_cinetique_translation": "$v^2 - v_0^2 = 2 a_0 (x - x_0)$ (valable pour un MRUV)."
+            }
+        },
+        {
+            "question": "Donner la vitesse angulaire $\\omega(t)$ et l’accélération angulaire $\\dot{\\omega}(t)$ en fonction de $\\theta(t)$.",
+            "type": "math input",
+            "answer": {
+                "vitesse_angulaire": "$\\omega(t) = \\frac{d\\theta(t)}{dt} = \\dot{\\theta}(t)$",
+                "acceleration_angulaire": "$\\dot{\\omega}(t) = \\frac{d\\omega(t)}{dt} = \\frac{d^2\\theta(t)}{dt^2} = \\ddot{\\theta}(t)$"
+            }
+        },
+        {
+            "question": "Démontrer les équations du mouvement d’un point $M$ en rotation autour d’un axe fixe $(O, \\vec{z})$ en fonction de $\\vec{e_r}$ et $\\vec{e_\\theta}$. Vous précisez l’accélération tangentielle et normale.",
+            "type": "math input",
+            "answer": {
+                "position_rotation": "$\\vec{OM} = r \\vec{e_r}$",
+                "vitesse_rotation": "$\\vec{V}(M/R) = \\frac{d\\vec{OM}}{dt}|_R = r \\dot{\\theta} \\vec{e_\\theta}$",
+                "acceleration_rotation": "$\\vec{a}(M/R) = \\frac{d\\vec{V}}{dt}|_R = \\underbrace{-r \\dot{\\theta}^2 \\vec{e_r}}_{\\vec{a}_n} + \\underbrace{r \\ddot{\\theta} \\vec{e_\\theta}}_{\\vec{a}_t}$",
+                "acceleration_normale": "$\\vec{a}_n = -r \\omega^2 \\vec{e_r}$ (centripète)",
+                "acceleration_tangentielle": "$\\vec{a}_t = r \\dot{\\omega} \\vec{e_\\theta}$"
+            }
+        },
+        {
+            "question": "Donner les équation et graphes pour un mouvement de rotation uniforme et un mouvement de rotation uniformément varié.",
+            "type": "math input",
+            "answer": {
+                "mru_rotation": "Mouvement de rotation uniforme ($\\dot{\\omega}(t)=0$): $\\omega(t) = \\omega_0$, $\\theta(t) = \\omega_0 t + \\theta_0$.",
+                "mruv_rotation": "Mouvement de rotation uniformément varié ($\\dot{\\omega}(t)=\\dot{\\omega}_0$ = constante): $\\omega(t) = \\dot{\\omega}_0 t + \\omega_0$, $\\theta(t) = \\frac{1}{2} \\dot{\\omega}_0 t^2 + \\omega_0 t + \\theta_0$."
+            }
+        },
+        {
+            "question": "Donner la relation entre $\\theta(t)$ et $\\omega(t)$ sans la variable $t$.",
+            "type": "math input",
+            "answer": {
+                "theoreme_energie_cinetique_rotation": "$\\omega^2 - \\omega_0^2 = 2 \\dot{\\omega}_0 (\\theta - \\theta_0)$ (valable pour un MRUV de rotation)."
             }
         }
     ]

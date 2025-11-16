@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import './asset/css/App.css';
 import { SpeedInsights } from '@vercel/speed-insights/react';
-import { MathInput } from './components/MathInput';
 
 function App() {
 	return (

@@ -20,7 +20,7 @@ const AxeLiaisonList = [
 	'Sphère-Cylindre (Linéaire Annulaire)',
 	'Cylindre-Plan (Linéaire Rectiligne)',
 ];
-//const DirectionsLiaisonList = ['Glissière'];
+
 const NormaleLiaisonList = [
 	'Sphère-Plan (Ponctuelle)',
 	'Cylindre-Plan (Linéaire Rectiligne)',

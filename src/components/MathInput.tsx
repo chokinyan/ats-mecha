@@ -44,28 +44,18 @@ export function MathInput() {
 
 	useEffect(() => {
 		if (mathFieldRef.current) {
-			window.mathVirtualKeyboard.alphabeticLayout = 'azerty';
-			window.mathVirtualKeyboard.layouts = [
-				'alphabetic',
-				'numeric',
-				'greek',
-				'symbols',
-			];
-			mathFieldRef.current.mathVirtualKeyboardPolicy = 'manual';
-			mathFieldRef.current.placeholder = 'math field';
+            mathFieldRef.current.placeholder = 'math field';
 			mathFieldRef.current.addEventListener('input', (evt: Event) => {
 				const target = evt.target as MathfieldElementType;
 				console.log('LaTeX:', target.value);
 			});
-			mathFieldRef.current.smartMode = true;
-			mathFieldRef.current.addEventListener('focusin', () => {
-				window.mathVirtualKeyboard.show({ animate: true });
-			});
-			mathFieldRef.current.addEventListener('focusout', () => {
-				window.mathVirtualKeyboard.hide({ animate: true });
-			});
+            mathFieldRef.current.smartMode = true;
 		}
 	}, []);
 
-	return <math-field ref={mathFieldRef} />;
+	return (
+		<math-field
+			ref={mathFieldRef}
+		/>
+	);
 }
