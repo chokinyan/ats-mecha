@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import info from '../asset/json/torseurs.json';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import info_stat from '../asset/json/torseurs_stat.json';
+import info_cin from '../asset/json/torseurs_cin.json';
 
 type Torseur = {
 	fichier: string;
@@ -9,6 +10,7 @@ type Torseur = {
 	description: string;
 	axe?: 'X' | 'Y' | 'Z';
 	normale?: 'X' | 'Y' | 'Z';
+	folder?: string;
 };
 
 const AxeLiaisonList = [
@@ -49,6 +51,8 @@ const verifierReponse = (
 
 function Torseur() {
 	const navigate = useNavigate();
+	const [searchParams] = useSearchParams();
+	const type = searchParams.get('type') || 'cinematique';
 
 	const [point, setPoint] = useState<number>(0);
 	const [questionNumber, setQuestionNumber] = useState<number>(0);
@@ -59,11 +63,34 @@ function Torseur() {
 	// Initialiser listTorseurs une seule fois avec useState
 	const [listTorseurs] = useState<Torseur[]>(() => {
 		const torseurs: Torseur[] = [];
+		let sourceData: Torseur[] = [];
+
+		if (type === 'statique') {
+			sourceData = info_stat.torseurs.map((t) => ({
+				...t,
+				folder: 'torseurStat',
+			})) as Torseur[];
+		} else if (type === 'mixte') {
+			sourceData = [
+				...info_cin.torseurs.map((t) => ({
+					...t,
+					folder: 'torseurCin',
+				})),
+				...info_stat.torseurs.map((t) => ({
+					...t,
+					folder: 'torseurStat',
+				})),
+			] as Torseur[];
+		} else {
+			sourceData = info_cin.torseurs.map((t) => ({
+				...t,
+				folder: 'torseurCin',
+			})) as Torseur[];
+		}
+
 		while (torseurs.length !== 10) {
-			const rand = Math.floor(
-				Math.random() * info.metadata.total_torseurs
-			);
-			const torseur = info.torseurs[rand];
+			const rand = Math.floor(Math.random() * sourceData.length);
+			const torseur = sourceData[rand];
 			if (
 				!torseurs.find(
 					(torseurFound) => torseurFound.fichier === torseur.fichier
@@ -76,23 +103,29 @@ function Torseur() {
 		return torseurs;
 	});
 
+	const getTitle = () => {
+		if (type === 'statique') return 'Torseurs Statiques';
+		if (type === 'mixte') return 'Torseurs Mixtes';
+		return 'Torseurs Cinématiques';
+	};
+
 	return (
 		<>
 			<head>
 				<title>
-					Torseurs Cinématiques - Question {questionNumber + 1}/10
+					{getTitle()} - Question {questionNumber + 1}/10
 				</title>
 			</head>
 			<header>
-				<h2>Torseurs Cinématiques</h2>
+				<h2>{getTitle()}</h2>
 			</header>
 			<main>
 				<div className="QuestionContainer">
 					<img
-						src={`/asset/torseurCin/${listTorseurs[
-							questionNumber
-						].fichier.toUpperCase()}`}
-						alt="Torseur Cinématique"
+						src={`/asset/${
+							listTorseurs[questionNumber].folder
+						}/${listTorseurs[questionNumber].fichier.toUpperCase()}`}
+						alt="Torseur"
 						className="QuestionImage"
 					/>
 					<select
@@ -102,7 +135,7 @@ function Torseur() {
 						<option value="" disabled>
 							Selectionner un type de liaison
 						</option>
-						{info.metadata.types_liaisons.map((type, index) => (
+						{info_cin.metadata.types_liaisons.map((type, index) => (
 							<option key={index} value={type}>
 								{type}
 							</option>

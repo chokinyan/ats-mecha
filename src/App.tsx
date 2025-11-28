@@ -10,7 +10,7 @@ function App() {
 				<h1>Bienvenue sur un site pour réviser un peu de mécha</h1>
 			</header>
 			<main>
-				<section>
+				<section className="Choice-Container">
 					<h2>Schémas cinématiques</h2>
 					<Link to="/schema-cinematique?types=2D">
 						Schematisation 2D
@@ -22,15 +22,19 @@ function App() {
 						Schematisation 2D et 3D
 					</Link>
 				</section>
-				<section>
+				<section className="Choice-Container">
 					<h2>Torseurs</h2>
-					<Link to="/torseurs">Torseur Cinematique</Link>
+					<Link to="/torseurs?type=cinematique">
+						Torseur Cinematique
+					</Link>
+					<Link to="/torseurs?type=statique">Torseur Statique</Link>
+					<Link to="/torseurs?type=mixte">Torseur Statique et Cinematique</Link>
 				</section>
-				<section>
+				<section className="Choice-Container">
 					<h2>Tableaux des liaisons</h2>
 					<p>À venir...</p>
 				</section>
-				<section>
+				<section className="Choice-Container">
 					<h2>Questions de khole</h2>
 					<p>À venir...</p>
 				</section>
