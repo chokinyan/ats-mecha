@@ -13,6 +13,7 @@ import ReactGA from 'react-ga4';
 import { useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import Tableau from './pages/tableau.tsx';
 
 // Initialise GA4 en dehors du composant
 ReactGA.initialize('G-E13SL0PL8L');
@@ -46,6 +47,7 @@ export default function Main() {
 						path="schema-cinematique"
 						element={<SchemaCinematique />}
 					/>
+					<Route path="tableau" element={<Tableau />} />
 					<Route path="torseurs" element={<Torseur />} />
 					<Route path="finish" element={<Finish />} />
 				</Routes>

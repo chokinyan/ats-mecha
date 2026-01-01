@@ -1,218 +1,218 @@
 {
-  "torseurs": [
-    {
-      "fichier": "TLINRXY.JPG",
-      "type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
-      "liaison": "Cylindre-Plan (Linéaire Rectiligne)",
-      "description": "Cylindre-Plan d’axe (O,X) Normale Y",
-      "axe": "X",
-      "normale": "Y"
-    },
-    {
-      "fichier": "TLINRYZ.JPG",
-      "type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
-      "liaison": "Cylindre-Plan (Linéaire Rectiligne)",
-      "description": "Cylindre-Plan d’axe (O,Y) Normale Z",
-      "axe": "Y",
-      "normale": "Z"
-    },
-    {
-      "fichier": "TLINRZX.JPG",
-      "type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
-      "liaison": "Cylindre-Plan (Linéaire Rectiligne)",
-      "description": "Cylindre-Plan d’axe (O,Z) Normale X",
-      "axe": "Z",
-      "normale": "X"
-    },
-    {
-      "fichier": "TPONY.JPG",
-      "type_liaison": "Sphère-Plan (Ponctuelle)",
-      "liaison": "Sphère-Plan (Ponctuelle)",
-      "description": "Sphere plan normale Y",
-      "normale": "Y"
-    },
-    {
-      "fichier": "TPONZ.JPG",
-      "type_liaison": "Sphère-Plan (Ponctuelle)",
-      "liaison": "Sphère-Plan (Ponctuelle)",
-      "description": "Sphere plan normale Z",
-      "normale": "Z"
-    },
-    {
-      "fichier": "TPONX.JPG",
-      "type_liaison": "Sphère-Plan (Ponctuelle)",
-      "liaison": "Sphère-Plan (Ponctuelle)",
-      "description": "Sphere plan normale X",
-      "normale": "X"
-    },
-    {
-      "fichier": "THELX.JPG",
-      "type_liaison": "Hélicoïdale",
-      "liaison": "Hélicoïdale",
-      "description": "Hélicoidale axe (O,X)",
-      "axe": "X"
-    },
-    {
-      "fichier": "THELY.JPG",
-      "type_liaison": "Hélicoïdale",
-      "liaison": "Hélicoïdale",
-      "description": "Hélicoidale axe (O,Y)",
-      "axe": "Y"
-    },
-    {
-      "fichier": "THELZ.JPG",
-      "type_liaison": "Hélicoïdale",
-      "liaison": "Hélicoïdale",
-      "description": "Hélicoidale axe (O,Z)",
-      "axe": "Z"
-    },
-    {
-      "fichier": "TRODX.JPG",
-      "type_liaison": "Sphérique (Rotule) à doigt",
-      "liaison": "Sphérique (Rotule) à doigt",
-      "description": "Spherique a doigt d'axe X",
-      "_axe": "X"
-    },
-    {
-      "fichier": "TRODY.JPG",
-      "type_liaison": "Sphérique (Rotule) à doigt",
-      "liaison": "Sphérique (Rotule) à doigt",
-      "description": "Spherique a doigt d'axe Y",
-      "_axe": "Y"
-    },
-    {
-      "fichier": "TRODZ.JPG",
-      "type_liaison": "Sphérique (Rotule) à doigt",
-      "liaison": "Sphérique (Rotule) à doigt",
-      "description": "Spherique a doigt d'axe Z",
-      "_axe": "Z"
-    },
-    {
-      "fichier": "TPIVX.JPG",
-      "type_liaison": "Pivot",
-      "liaison": "Pivot",
-      "description": "Pivot axe (O,X)",
-      "axe": "X"
-    },
-    {
-      "fichier": "TPIVY.JPG",
-      "type_liaison": "Pivot",
-      "liaison": "Pivot",
-      "description": "Pivot axe (O,Y)",
-      "axe": "Y"
-    },
-    {
-      "fichier": "TPIVZ.JPG",
-      "type_liaison": "Pivot",
-      "liaison": "Pivot",
-      "description": "Pivot axe (O,Z)",
-      "axe": "Z"
-    },
-    {
-      "fichier": "TPIGLX.JPG",
-      "type_liaison": "Pivot glissant",
-      "liaison": "Pivot glissant",
-      "description": "Pivot glissant axe (O,X)",
-      "axe": "X"
-    },
-    {
-      "fichier": "TPIGLY.JPG",
-      "type_liaison": "Pivot glissant",
-      "liaison": "Pivot glissant",
-      "description": "Pivot glissant axe (O,Y)",
-      "axe": "Y"
-    },
-    {
-      "fichier": "TPIGLZ.JPG",
-      "type_liaison": "Pivot glissant",
-      "liaison": "Pivot glissant",
-      "description": "Pivot glissant axe (O,Z)",
-      "axe": "Z"
-    },
-    {
-      "fichier": "TLINAX.JPG",
-      "type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
-      "liaison": "Sphère-Cylindre (Linéaire Annulaire)",
-      "description": "Sphere cylindre d’axe (O,X)",
-      "axe": "X"
-    },
-    {
-      "fichier": "TLINAY.JPG",
-      "type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
-      "liaison": "Sphère-Cylindre (Linéaire Annulaire)",
-      "description": "Sphere cylindre d’axe (O,Y)",
-      "axe": "Y"
-    },
-    {
-      "fichier": "TLINAZ.JPG",
-      "type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
-      "liaison": "Sphère-Cylindre (Linéaire Annulaire)",
-      "description": "Sphere cylindre d’axe (O,Z)",
-      "axe": "Z"
-    },
-    {
-      "fichier": "TPLAX.JPG",
-      "type_liaison": "Appui-Plan",
-      "liaison": "Appui-Plan",
-      "description": "Appui plan normale X",
-      "normale": "X"
-    },
-    {
-      "fichier": "TPLAY.JPG",
-      "type_liaison": "Appui-Plan",
-      "liaison": "Appui-Plan",
-      "description": "Appui plan normale Y",
-      "normale": "Y"
-    },
-    {
-      "fichier": "TPLAZ.JPG",
-      "type_liaison": "Appui-Plan",
-      "liaison": "Appui-Plan",
-      "description": "Appui plan normale Z",
-      "normale": "Z"
-    },
-    {
-      "fichier": "TGLIX.JPG",
-      "type_liaison": "Glissière",
-      "liaison": "Glissière",
-      "description": "Glissiere d’axe (O,X)",
-      "axe": "X"
-    },
-    {
-      "fichier": "TGLIY.JPG",
-      "type_liaison": "Glissière",
-      "liaison": "Glissière",
-      "description": "Glissiere d’axe (O,Y)",
-      "axe": "Y"
-    },
-    {
-      "fichier": "TGLIZ.JPG",
-      "type_liaison": "Glissière",
-      "liaison": "Glissière",
-      "description": "Glissiere d’axe (O,Z)",
-      "axe": "Z"
-    },
-    {
-      "fichier": "TROT.JPG",
-      "type_liaison": "Sphérique (Rotule)",
-      "liaison": "Sphérique (Rotule)",
-      "description": "Spherique"
-    }
-  ],
-  "metadata": {
-    "total_torseurs": 28,
-    "types_liaisons": [
-      "Glissière",
-      "Pivot",
-      "Pivot glissant",
-      "Hélicoïdale",
-      "Appui-Plan",
-      "Sphérique (Rotule)",
-      "Sphérique (Rotule) à doigt",
-      "Sphère-Cylindre (Linéaire Annulaire)",
-      "Cylindre-Plan (Linéaire Rectiligne)",
-      "Sphère-Plan (Ponctuelle)"
-    ],
-    "pattern_nommage": "T[TYPE][AXE].JPG"
-  }
+	"torseurs": [
+		{
+			"fichier": "TLINRXY.JPG",
+			"type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+			"liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+			"description": "Cylindre-Plan d’axe (O,X) Normale Y",
+			"axe": "X",
+			"normale": "Y"
+		},
+		{
+			"fichier": "TLINRYZ.JPG",
+			"type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+			"liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+			"description": "Cylindre-Plan d’axe (O,Y) Normale Z",
+			"axe": "Y",
+			"normale": "Z"
+		},
+		{
+			"fichier": "TLINRZX.JPG",
+			"type_liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+			"liaison": "Cylindre-Plan (Linéaire Rectiligne)",
+			"description": "Cylindre-Plan d’axe (O,Z) Normale X",
+			"axe": "Z",
+			"normale": "X"
+		},
+		{
+			"fichier": "TPONY.JPG",
+			"type_liaison": "Sphère-Plan (Ponctuelle)",
+			"liaison": "Sphère-Plan (Ponctuelle)",
+			"description": "Sphere plan normale Y",
+			"normale": "Y"
+		},
+		{
+			"fichier": "TPONZ.JPG",
+			"type_liaison": "Sphère-Plan (Ponctuelle)",
+			"liaison": "Sphère-Plan (Ponctuelle)",
+			"description": "Sphere plan normale Z",
+			"normale": "Z"
+		},
+		{
+			"fichier": "TPONX.JPG",
+			"type_liaison": "Sphère-Plan (Ponctuelle)",
+			"liaison": "Sphère-Plan (Ponctuelle)",
+			"description": "Sphere plan normale X",
+			"normale": "X"
+		},
+		{
+			"fichier": "THELX.JPG",
+			"type_liaison": "Hélicoïdale",
+			"liaison": "Hélicoïdale",
+			"description": "Hélicoidale axe (O,X)",
+			"axe": "X"
+		},
+		{
+			"fichier": "THELY.JPG",
+			"type_liaison": "Hélicoïdale",
+			"liaison": "Hélicoïdale",
+			"description": "Hélicoidale axe (O,Y)",
+			"axe": "Y"
+		},
+		{
+			"fichier": "THELZ.JPG",
+			"type_liaison": "Hélicoïdale",
+			"liaison": "Hélicoïdale",
+			"description": "Hélicoidale axe (O,Z)",
+			"axe": "Z"
+		},
+		{
+			"fichier": "TRODX.JPG",
+			"type_liaison": "Sphérique (Rotule) à doigt",
+			"liaison": "Sphérique (Rotule) à doigt",
+			"description": "Spherique a doigt d'axe X",
+			"_axe": "X"
+		},
+		{
+			"fichier": "TRODY.JPG",
+			"type_liaison": "Sphérique (Rotule) à doigt",
+			"liaison": "Sphérique (Rotule) à doigt",
+			"description": "Spherique a doigt d'axe Y",
+			"_axe": "Y"
+		},
+		{
+			"fichier": "TRODZ.JPG",
+			"type_liaison": "Sphérique (Rotule) à doigt",
+			"liaison": "Sphérique (Rotule) à doigt",
+			"description": "Spherique a doigt d'axe Z",
+			"_axe": "Z"
+		},
+		{
+			"fichier": "TPIVX.JPG",
+			"type_liaison": "Pivot",
+			"liaison": "Pivot",
+			"description": "Pivot axe (O,X)",
+			"axe": "X"
+		},
+		{
+			"fichier": "TPIVY.JPG",
+			"type_liaison": "Pivot",
+			"liaison": "Pivot",
+			"description": "Pivot axe (O,Y)",
+			"axe": "Y"
+		},
+		{
+			"fichier": "TPIVZ.JPG",
+			"type_liaison": "Pivot",
+			"liaison": "Pivot",
+			"description": "Pivot axe (O,Z)",
+			"axe": "Z"
+		},
+		{
+			"fichier": "TPIGLX.JPG",
+			"type_liaison": "Pivot glissant",
+			"liaison": "Pivot glissant",
+			"description": "Pivot glissant axe (O,X)",
+			"axe": "X"
+		},
+		{
+			"fichier": "TPIGLY.JPG",
+			"type_liaison": "Pivot glissant",
+			"liaison": "Pivot glissant",
+			"description": "Pivot glissant axe (O,Y)",
+			"axe": "Y"
+		},
+		{
+			"fichier": "TPIGLZ.JPG",
+			"type_liaison": "Pivot glissant",
+			"liaison": "Pivot glissant",
+			"description": "Pivot glissant axe (O,Z)",
+			"axe": "Z"
+		},
+		{
+			"fichier": "TLINAX.JPG",
+			"type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+			"liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+			"description": "Sphere cylindre d’axe (O,X)",
+			"axe": "X"
+		},
+		{
+			"fichier": "TLINAY.JPG",
+			"type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+			"liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+			"description": "Sphere cylindre d’axe (O,Y)",
+			"axe": "Y"
+		},
+		{
+			"fichier": "TLINAZ.JPG",
+			"type_liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+			"liaison": "Sphère-Cylindre (Linéaire Annulaire)",
+			"description": "Sphere cylindre d’axe (O,Z)",
+			"axe": "Z"
+		},
+		{
+			"fichier": "TPLAX.JPG",
+			"type_liaison": "Appui-Plan",
+			"liaison": "Appui-Plan",
+			"description": "Appui plan normale X",
+			"normale": "X"
+		},
+		{
+			"fichier": "TPLAY.JPG",
+			"type_liaison": "Appui-Plan",
+			"liaison": "Appui-Plan",
+			"description": "Appui plan normale Y",
+			"normale": "Y"
+		},
+		{
+			"fichier": "TPLAZ.JPG",
+			"type_liaison": "Appui-Plan",
+			"liaison": "Appui-Plan",
+			"description": "Appui plan normale Z",
+			"normale": "Z"
+		},
+		{
+			"fichier": "TGLIX.JPG",
+			"type_liaison": "Glissière",
+			"liaison": "Glissière",
+			"description": "Glissiere d’axe (O,X)",
+			"axe": "X"
+		},
+		{
+			"fichier": "TGLIY.JPG",
+			"type_liaison": "Glissière",
+			"liaison": "Glissière",
+			"description": "Glissiere d’axe (O,Y)",
+			"axe": "Y"
+		},
+		{
+			"fichier": "TGLIZ.JPG",
+			"type_liaison": "Glissière",
+			"liaison": "Glissière",
+			"description": "Glissiere d’axe (O,Z)",
+			"axe": "Z"
+		},
+		{
+			"fichier": "TROT.JPG",
+			"type_liaison": "Sphérique (Rotule)",
+			"liaison": "Sphérique (Rotule)",
+			"description": "Spherique"
+		}
+	],
+	"metadata": {
+		"total_torseurs": 28,
+		"types_liaisons": [
+			"Glissière",
+			"Pivot",
+			"Pivot glissant",
+			"Hélicoïdale",
+			"Appui-Plan",
+			"Sphérique (Rotule)",
+			"Sphérique (Rotule) à doigt",
+			"Sphère-Cylindre (Linéaire Annulaire)",
+			"Cylindre-Plan (Linéaire Rectiligne)",
+			"Sphère-Plan (Ponctuelle)"
+		],
+		"pattern_nommage": "T[TYPE][AXE].JPG"
+	}
 }

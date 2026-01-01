@@ -1,6 +1,10 @@
 import { useSearchParams, Link } from 'react-router-dom';
 import ReactGA from 'react-ga4';
 import { useEffect } from 'react';
+import Layout from '../components/layout/Layout';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import '../assets/css/Quiz.css';
 
 function Finish() {
 	const [searchParams] = useSearchParams();
@@ -37,77 +41,74 @@ function Finish() {
 	}, [quizType, score, total, percentage]);
 
 	return (
-		<div>
-			<head>
-				<title>Quiz Terminé !</title>
-			</head>
-			<header>
-				<h1>Quiz Terminé !</h1>
-			</header>
-			<main>
-				<div style={{ textAlign: 'center', padding: '2rem' }}>
-					<h2>Votre Score</h2>
-					<div
-						style={{
-							fontSize: '3rem',
-							margin: '2rem 0',
-							fontWeight: 'bold',
-						}}
-					>
-						{score} / {total}
-					</div>
-					<div style={{ fontSize: '1.5rem', marginBottom: '2rem' }}>
-						{percentage}%
+		<Layout>
+			<div className="quiz-container">
+				<div className="quiz-header">
+					<h2 className="finish-title">Quiz Terminé !</h2>
+				</div>
+
+				<Card className="finish-card">
+					<h3 className="finish-score-label">Votre Score Final</h3>
+
+					<div className="finish-score-value">
+						{score} <span className="finish-total">/ {total}</span>
 					</div>
 
-					{percentage >= 80 && (
-						<p style={{ color: 'green', fontSize: '1.2rem' }}>
-							Excellent travail ! 🎉
-						</p>
-					)}
-					{percentage >= 50 && percentage < 80 && (
-						<p style={{ color: 'orange', fontSize: '1.2rem' }}>
-							Bon travail ! Continue à t'entraîner. 👍
-						</p>
-					)}
-					{percentage < 50 && (
-						<p style={{ color: 'red', fontSize: '1.2rem' }}>
-							Continue à réviser, tu vas y arriver ! 💪
-						</p>
-					)}
+					<div className="finish-percentage">{percentage}%</div>
 
-					<div
-						style={{
-							display: 'flex',
-							gap: '1rem',
-							justifyContent: 'center',
-							marginTop: '2rem',
-						}}
-					>
-						<Link to={urlReboot()}>
-							<button
-								style={{
-									padding: '1rem 2rem',
-									fontSize: '1rem',
-								}}
+					<div className="finish-message">
+						{percentage >= 80 && (
+							<p
+								className="finish-message-text"
+								style={{ color: 'var(--color-success)' }}
 							>
-								Recommencer
-							</button>
+								Excellent travail ! 🎉
+							</p>
+						)}
+						{percentage >= 50 && percentage < 80 && (
+							<p
+								className="finish-message-text"
+								style={{ color: '#f59e0b' }}
+							>
+								Bon travail ! Continue à t'entraîner. 👍
+							</p>
+						)}
+						{percentage < 50 && (
+							<p
+								className="finish-message-text"
+								style={{ color: 'var(--color-error)' }}
+							>
+								Continue à réviser, tu vas y arriver ! 💪
+							</p>
+						)}
+					</div>
+
+					<div className="finish-actions">
+						<Link
+							to={urlReboot()}
+							style={{ textDecoration: 'none' }}
+						>
+							<Button
+								variant="primary"
+								fullWidth
+								className="finish-button"
+							>
+								Recommencer le Quiz
+							</Button>
 						</Link>
-						<Link to="/">
-							<button
-								style={{
-									padding: '1rem 2rem',
-									fontSize: '1rem',
-								}}
+						<Link to="/" style={{ textDecoration: 'none' }}>
+							<Button
+								variant="secondary"
+								fullWidth
+								className="finish-button"
 							>
 								Retour à l'accueil
-							</button>
+							</Button>
 						</Link>
 					</div>
-				</div>
-			</main>
-		</div>
+				</Card>
+			</div>
+		</Layout>
 	);
 }
 

@@ -1,62 +1,150 @@
 import { Link } from 'react-router-dom';
-import './asset/css/App.css';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import Layout from './components/layout/Layout';
+import Card from './components/ui/Card';
+import Button from './components/ui/Button';
+import './assets/css/Home.css';
 
-function App() {
+const App = () => {
 	return (
-		<>
+		<Layout>
 			<SpeedInsights />
-			<header>
-				<h1>Bienvenue sur un site pour réviser un peu de mécha</h1>
-			</header>
-			<main>
-				<section className="Choice-Container">
-					<h2>Schémas cinématiques</h2>
-					<Link to="/schema-cinematique?types=2D">
-						Schematisation 2D
-					</Link>
-					<Link to="/schema-cinematique?types=3D">
-						Schematisation 3D
-					</Link>
-					<Link to="/schema-cinematique?types=2D et 3D">
-						Schematisation 2D et 3D
-					</Link>
-				</section>
-				<section className="Choice-Container">
-					<h2>Torseurs</h2>
-					<Link to="/torseurs?type=cinematique">
-						Torseur Cinematique
-					</Link>
-					<Link to="/torseurs?type=statique">Torseur Statique</Link>
-					<Link to="/torseurs?type=mixte">Torseur Statique et Cinematique</Link>
-				</section>
-				<section className="Choice-Container">
-					<h2>Tableaux des liaisons</h2>
-					<p>À venir...</p>
-				</section>
-				<section className="Choice-Container">
-					<h2>Questions de khole</h2>
-					<p>À venir...</p>
-				</section>
-				<h1></h1>
-			</main>
-			<footer>
-				<small
-					style={{
-						display: 'block',
-						fontSize: '0.85rem',
-						color: '#666',
-						padding: '1rem',
-						textAlign: 'center',
-					}}
-				>
-					Projet réalisé à des fins pédagogiques. Certaines images et
-					questions sont inspirées de l'application Android « Liaison?
-					». Je ne revendique aucun droit sur ces contenus originaux.
-				</small>
-			</footer>
-		</>
+			<div className="home-container">
+				{/* Hero Section */}
+				<div className="hero-section">
+					<h2 className="hero-title">Révisions Mécanique</h2>
+					<p className="hero-subtitle">
+						Entraînez-vous sur les schémas cinématiques, les
+						torseurs et apprenez vos définitions.
+					</p>
+				</div>
+
+				{/* Modules Grid */}
+				<div className="modules-grid">
+					{/* Schémas Cinématiques */}
+					<Card className="module-card">
+						<div className="module-header">
+							<h3>Schémas Cinématiques</h3>
+							<p className="module-description">
+								Identifiez les liaisons à partir de schémas.
+							</p>
+						</div>
+						<div className="module-actions">
+							<Link
+								to="/schema-cinematique?types=2D"
+								style={{ textDecoration: 'none' }}
+							>
+								<Button
+									variant="secondary"
+									fullWidth
+									className="module-action-button"
+								>
+									2D
+								</Button>
+							</Link>
+							<Link
+								to="/schema-cinematique?types=3D"
+								style={{ textDecoration: 'none' }}
+							>
+								<Button
+									variant="secondary"
+									fullWidth
+									className="module-action-button"
+								>
+									3D
+								</Button>
+							</Link>
+							<Link
+								to="/schema-cinematique?types=2D et 3D"
+								style={{ textDecoration: 'none' }}
+							>
+								<Button
+									variant="secondary"
+									fullWidth
+									className="module-action-button"
+								>
+									Mixte (2D & 3D)
+								</Button>
+							</Link>
+						</div>
+					</Card>
+
+					{/* Torseurs */}
+					<Card className="module-card">
+						<div className="module-header">
+							<h3>Torseurs</h3>
+							<p className="module-description">
+								Retrouvez les éléments de réduction.
+							</p>
+						</div>
+						<div className="module-actions">
+							<Link
+								to="/torseurs?type=cinematique"
+								style={{ textDecoration: 'none' }}
+							>
+								<Button
+									variant="secondary"
+									fullWidth
+									className="module-action-button"
+								>
+									Cinématique
+								</Button>
+							</Link>
+							<Link
+								to="/torseurs?type=statique"
+								style={{ textDecoration: 'none' }}
+							>
+								<Button
+									variant="secondary"
+									fullWidth
+									className="module-action-button"
+								>
+									Statique
+								</Button>
+							</Link>
+							<Link
+								to="/torseurs?type=mixte"
+								style={{ textDecoration: 'none' }}
+							>
+								<Button
+									variant="secondary"
+									fullWidth
+									className="module-action-button"
+								>
+									Mixte
+								</Button>
+							</Link>
+						</div>
+					</Card>
+
+					{/* Ressources */}
+					<Card className="module-card-full">
+						<div className="module-header">
+							<h3>Ressources</h3>
+							<p className="module-description">
+								Fiches de révision et tableaux.
+							</p>
+						</div>
+						<div className="module-actions">
+							<Link
+								to="/tableau"
+								style={{ textDecoration: 'none' }}
+							>
+								<Button variant="primary" fullWidth>
+									Tableau des liaisons
+								</Button>
+							</Link>
+							<div className="disabled-action">
+								<Button variant="secondary" fullWidth disabled>
+									Questions de khole (Bientôt)
+								</Button>
+							</div>
+						</div>
+					</Card>
+				</div>
+			</div>
+		</Layout>
 	);
-}
+};
 
 export default App;

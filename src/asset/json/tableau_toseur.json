@@ -1,0 +1,158 @@
+{
+	"toseurs": [
+		{
+			"nom": "Cylindre-Plan (Linéaire Rectiligne)",
+			"Img": "cyl",
+			"cinematique": [
+				[1, 0],
+				[0, 1],
+				[1, 1]
+			],
+			"statique": [
+				[1, 0],
+				[0, 1],
+				[0, 0]
+			]
+		},
+		{
+			"nom": "Sphère-Plan (Ponctuelle)",
+			"Img": "platSphere",
+			"cinematique": [
+				[1, 1],
+				[1, 1],
+				[1, 0]
+			],
+			"statique": [
+				[0, 0],
+				[0, 0],
+				[1, 0]
+			]
+		},
+		{
+			"nom": "Hélicoïdale",
+			"Img": "helico",
+			"cinematique": [
+				[0, 0],
+				[1, 1],
+				[0, 0]
+			],
+			"statique": [
+				[1, 1],
+				[1, 1],
+				[1, 1]
+			]
+		},
+		{
+			"nom": "Sphérique (Rotule) à doigt",
+			"Img": "sphereDoight",
+			"cinematique": [
+				[1, 0],
+				[0, 0],
+				[1, 0]
+			],
+			"statique": [
+				[1, 0],
+				[1, 1],
+				[1, 0]
+			]
+		},
+		{
+			"nom": "Pivot",
+			"Img": "pivot",
+			"cinematique": [
+				[0, 0],
+				[1, 0],
+				[0, 0]
+			],
+			"statique": [
+				[1, 1],
+				[1, 0],
+				[1, 1]
+			]
+		},
+		{
+			"nom": "Pivot glissant",
+			"Img": "pivGli",
+			"cinematique": [
+				[0, 0],
+				[1, 1],
+				[0, 0]
+			],
+			"statique": [
+				[1, 1],
+				[0, 0],
+				[1, 1]
+			]
+		},
+		{
+			"nom": "Sphère-Cylindre (Linéaire Annulaire)",
+			"Img": "SphereCyl",
+			"cinematique": [
+				[1, 0],
+				[1, 1],
+				[1, 0]
+			],
+			"statique": [
+				[1, 0],
+				[0, 0],
+				[1, 0]
+			]
+		},
+		{
+			"nom": "Appui-Plan",
+			"Img": "plat",
+			"cinematique": [
+				[0, 1],
+				[0, 1],
+				[1, 0]
+			],
+			"statique": [
+				[0, 1],
+				[0, 1],
+				[1, 0]
+			]
+		},
+		{
+			"nom": "Glissière",
+			"Img": "glis",
+			"cinematique": [
+				[0, 0],
+				[0, 1],
+				[0, 0]
+			],
+			"statique": [
+				[1, 1],
+				[0, 1],
+				[1, 1]
+			]
+		},
+		{
+			"nom": "Sphérique (Rotule)",
+			"Img": "Sphere",
+			"cinematique": [
+				[1, 0],
+				[1, 0],
+				[1, 0]
+			],
+			"statique": [
+				[1, 0],
+				[1, 0],
+				[1, 0]
+			]
+		},
+		{
+			"nom": "Encastrement",
+			"Img": "libre",
+			"cinematique": [
+				[0, 0],
+				[0, 0],
+				[0, 0]
+			],
+			"statique": [
+				[1, 1],
+				[1, 1],
+				[1, 1]
+			]
+		}
+	]
+}

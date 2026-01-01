@@ -44,18 +44,14 @@ export function MathInput() {
 
 	useEffect(() => {
 		if (mathFieldRef.current) {
-            mathFieldRef.current.placeholder = 'math field';
+			mathFieldRef.current.placeholder = 'math field';
 			mathFieldRef.current.addEventListener('input', (evt: Event) => {
 				const target = evt.target as MathfieldElementType;
 				console.log('LaTeX:', target.value);
 			});
-            mathFieldRef.current.smartMode = true;
+			mathFieldRef.current.smartMode = true;
 		}
 	}, []);
 
-	return (
-		<math-field
-			ref={mathFieldRef}
-		/>
-	);
+	return <math-field ref={mathFieldRef} />;
 }
