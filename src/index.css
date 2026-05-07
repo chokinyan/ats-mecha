@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+html,
+body,
+#root {
+	height: 100%;
+}
+
+body {
+	font-family:
+		ui-sans-serif,
+		system-ui,
+		-apple-system,
+		'Segoe UI',
+		Roboto,
+		'Helvetica Neue',
+		Arial;
+}
+
+/* small container utility to mimic current layout */
+.container-center {
+	@apply max-w-4xl mx-auto px-4;
+}
+
+/* wide container for large tables */
+.container-wide {
+	@apply max-w-7xl mx-auto px-4;
+}
+
+/* KaTeX white text for dark theme */
+.katex-white {
+	color: #e2e8f0 !important;
+}
+
+.katex-white .katex {
+	color: #e2e8f0;
+	font-size: 1.2em;
+}
+
+.katex-white .katex-mathml {
+	display: none;
+}

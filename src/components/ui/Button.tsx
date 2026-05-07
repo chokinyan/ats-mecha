@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../assets/css/variables.css';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	variant?: 'primary' | 'secondary' | 'danger' | 'success';
@@ -14,34 +13,25 @@ const Button: React.FC<ButtonProps> = ({
 	style = {},
 	...props
 }) => {
-	let bgColor = 'var(--color-primary)';
-	let color = '#000000'; // Primary button (white bg) needs black text
+	const base =
+		'inline-flex items-center justify-center rounded-lg text-base font-semibold transition-all duration-200 active:scale-[0.98]';
+	const size = fullWidth ? 'w-full py-3.5' : 'py-2.5 px-5';
 
-	if (variant === 'success') bgColor = 'var(--color-success)';
-	if (variant === 'danger') bgColor = 'var(--color-error)';
-	if (variant === 'secondary') {
-		bgColor = 'var(--color-secondary)'; // Use variable for bg
-		color = 'var(--color-text)'; // Keep text variable
-	}
+	const variantClasses: Record<string, string> = {
+		primary: 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-md hover:shadow-lg hover:from-blue-400 hover:to-indigo-500 border border-indigo-400/20',
+		secondary: 'bg-slate-800 text-slate-100 border border-slate-600 shadow-sm hover:bg-slate-700 hover:border-slate-500',
+		success: 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md hover:shadow-lg hover:from-emerald-400 hover:to-teal-400',
+		danger: 'bg-gradient-to-r from-rose-500 to-red-600 text-white shadow-md hover:shadow-lg hover:from-rose-400 hover:to-red-500',
+	};
+
+	const disabledCls = props.disabled
+		? 'opacity-50 cursor-not-allowed saturate-50'
+		: 'hover:-translate-y-0.5';
 
 	return (
 		<button
-			className={`ui-button ${className}`}
-			style={{
-				backgroundColor: bgColor,
-				color: color,
-				border:
-					variant === 'secondary'
-						? '1px solid var(--color-border)'
-						: 'none',
-				borderRadius: 'var(--radius-sm)',
-				padding: '0.75rem 1.5rem',
-				fontSize: '1rem',
-				cursor: 'pointer',
-				width: fullWidth ? '100%' : 'auto',
-				transition: 'opacity 0.2s',
-				...style,
-			}}
+			className={`${base} ${size} ${variantClasses[variant]} ${disabledCls} ${className}`}
+			style={{ ...(style as React.CSSProperties) }}
 			{...props}
 		>
 			{children}

@@ -4,20 +4,24 @@ import { useEffect } from 'react';
 import Layout from '../components/layout/Layout';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import '../assets/css/Quiz.css';
+// Styles migrated to Tailwind; legacy CSS removed
 
 function Finish() {
 	const [searchParams] = useSearchParams();
 	const score = searchParams.get('score') || '0';
 	const total = searchParams.get('total') || '10';
 	const quizType = searchParams.get('quiz') || 'schema-cinematique';
-	const dimension = searchParams.get('dimension') || '2D';
+	// Fix: schema-cinematique uses ?types= and torseurs uses ?type=
+	const types = searchParams.get('types') || '2D';
 
 	const urlReboot = () => {
-		if (quizType && dimension) {
-			return `/${quizType}?dimension=${dimension}`;
+		if (quizType === 'schema-cinematique') {
+			return `/schema-cinematique?types=${types}`;
 		}
-		return `/${quizType}`;
+		if (quizType === 'torseurs') {
+			return `/torseurs?type=${types}`;
+		}
+		return '/';
 	};
 
 	const percentage = Math.round((parseInt(score) / parseInt(total)) * 100);
@@ -42,66 +46,55 @@ function Finish() {
 
 	return (
 		<Layout>
-			<div className="quiz-container">
-				<div className="quiz-header">
-					<h2 className="finish-title">Quiz Terminé !</h2>
+			<div className="container-center flex flex-col gap-6">
+				<div className="text-center">
+					<h2 className="text-2xl font-extrabold text-slate-100">
+						Quiz Terminé !
+					</h2>
 				</div>
 
-				<Card className="finish-card">
-					<h3 className="finish-score-label">Votre Score Final</h3>
+				<Card>
+					<h3 className="text-sm text-slate-300 font-medium">
+						Votre Score Final
+					</h3>
 
-					<div className="finish-score-value">
-						{score} <span className="finish-total">/ {total}</span>
+					<div className="text-5xl font-extrabold text-slate-100 mt-4">
+						{score}{' '}
+						<span className="text-2xl text-slate-400">
+							/ {total}
+						</span>
 					</div>
 
-					<div className="finish-percentage">{percentage}%</div>
+					<div className="text-xl font-semibold text-slate-100 mt-2">
+						{percentage}%
+					</div>
 
-					<div className="finish-message">
+					<div className="mt-4">
 						{percentage >= 80 && (
-							<p
-								className="finish-message-text"
-								style={{ color: 'var(--color-success)' }}
-							>
+							<p className="text-emerald-500 font-semibold">
 								Excellent travail ! 🎉
 							</p>
 						)}
 						{percentage >= 50 && percentage < 80 && (
-							<p
-								className="finish-message-text"
-								style={{ color: '#f59e0b' }}
-							>
+							<p className="text-amber-500 font-semibold">
 								Bon travail ! Continue à t'entraîner. 👍
 							</p>
 						)}
 						{percentage < 50 && (
-							<p
-								className="finish-message-text"
-								style={{ color: 'var(--color-error)' }}
-							>
+							<p className="text-red-500 font-semibold">
 								Continue à réviser, tu vas y arriver ! 💪
 							</p>
 						)}
 					</div>
 
-					<div className="finish-actions">
-						<Link
-							to={urlReboot()}
-							style={{ textDecoration: 'none' }}
-						>
-							<Button
-								variant="primary"
-								fullWidth
-								className="finish-button"
-							>
+					<div className="mt-6 flex flex-col gap-3">
+						<Link to={urlReboot()}>
+							<Button variant="primary" fullWidth>
 								Recommencer le Quiz
 							</Button>
 						</Link>
-						<Link to="/" style={{ textDecoration: 'none' }}>
-							<Button
-								variant="secondary"
-								fullWidth
-								className="finish-button"
-							>
+						<Link to="/">
+							<Button variant="secondary" fullWidth>
 								Retour à l'accueil
 							</Button>
 						</Link>

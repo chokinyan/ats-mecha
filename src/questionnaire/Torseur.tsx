@@ -4,7 +4,6 @@ import info_stat from '../asset/json/torseurs_stat.json';
 import info_cin from '../asset/json/torseurs_cin.json';
 import Layout from '../components/layout/Layout';
 import Card from '../components/ui/Card';
-import '../assets/css/Quiz.css';
 import Select from '../components/ui/Select';
 import Button from '../components/ui/Button';
 
@@ -54,6 +53,15 @@ const verifierReponse = (
 	return false;
 };
 
+function pickRandom<T>(source: T[], count: number): T[] {
+	const shuffled = [...source];
+	for (let i = shuffled.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+	}
+	return shuffled.slice(0, count);
+}
+
 function Torseur() {
 	const navigate = useNavigate();
 	const [searchParams] = useSearchParams();
@@ -62,14 +70,16 @@ function Torseur() {
 	const [point, setPoint] = useState<number>(0);
 	const [questionNumber, setQuestionNumber] = useState<number>(0);
 	const [selectedValue, setSelectedValue] = useState<string>('');
+	const [axeValue, setAxeValue] = useState<string>('');
+	const [normaleValue, setNormaleValue] = useState<string>('');
+	const [feedback, setFeedback] = useState<{
+		correct: boolean;
+		message: string;
+	} | null>(null);
+	const [validated, setValidated] = useState<boolean>(false);
 
-	console.log(`Rendu des torseurs`);
-
-	// Initialiser listTorseurs une seule fois avec useState
 	const [listTorseurs] = useState<Torseur[]>(() => {
-		const torseurs: Torseur[] = [];
 		let sourceData: Torseur[] = [];
-
 		if (type === 'statique') {
 			sourceData = info_stat.torseurs.map((t) => ({
 				...t,
@@ -92,20 +102,7 @@ function Torseur() {
 				folder: 'torseurCin',
 			})) as Torseur[];
 		}
-
-		while (torseurs.length !== 10) {
-			const rand = Math.floor(Math.random() * sourceData.length);
-			const torseur = sourceData[rand];
-			if (
-				!torseurs.find(
-					(torseurFound) => torseurFound.fichier === torseur.fichier
-				)
-			) {
-				// assert the imported JSON item matches the Torseur type
-				torseurs.push(torseur as Torseur);
-			}
-		}
-		return torseurs;
+		return pickRandom(sourceData, Math.min(10, sourceData.length));
 	});
 
 	const getTitle = () => {
@@ -114,47 +111,104 @@ function Torseur() {
 		return 'Torseurs Cinématiques';
 	};
 
+	const handleValidate = () => {
+		const correct = verifierReponse(listTorseurs[questionNumber], {
+			axe: axeValue || undefined,
+			normal: normaleValue || undefined,
+			type: selectedValue,
+		});
+
+		const t = listTorseurs[questionNumber];
+		const correctStr = `${t.type_liaison}${t.axe ? ' axe ' + t.axe : ''}${t.normale ? ' normale ' + t.normale : ''}`;
+
+		if (correct) setPoint((p) => p + 1);
+
+		setFeedback({
+			correct,
+			message: correct
+				? 'Bonne réponse !'
+				: `Mauvaise réponse ! La bonne réponse était : ${correctStr}.`,
+		});
+		setValidated(true);
+	};
+
+	const handleNext = () => {
+		if (questionNumber < listTorseurs.length - 1) {
+			setQuestionNumber((n) => n + 1);
+			setSelectedValue('');
+			setAxeValue('');
+			setNormaleValue('');
+			setFeedback(null);
+			setValidated(false);
+		} else {
+			// Fix: use functional updater to get correct score including last answer
+			const finalScore = feedback?.correct ? point + 1 : point;
+			navigate(
+				`/finish?score=${finalScore}&total=${listTorseurs.length}&quiz=torseurs&types=${type}`
+			);
+		}
+	};
+
 	return (
 		<Layout>
-			<div className="quiz-container">
-				<div className="quiz-header">
-					<h2 className="quiz-title">{getTitle()}</h2>
-					<p className="quiz-progress">
-						Question {questionNumber + 1} / 10
+			<div className="container-center flex flex-col gap-6">
+				<div className="text-center">
+					<h2 className="text-2xl font-extrabold text-slate-100">
+						{getTitle()}
+					</h2>
+					<p className="text-sm text-slate-300">
+						Question {questionNumber + 1} / {listTorseurs.length}
 					</p>
+					{/* Barre de progression */}
+					<div className="mt-2 h-1.5 bg-slate-700 rounded-full overflow-hidden max-w-xs mx-auto">
+						<div
+							className="h-full bg-blue-500 transition-all duration-300"
+							style={{
+								width: `${((questionNumber + (validated ? 1 : 0)) / listTorseurs.length) * 100}%`,
+							}}
+						/>
+					</div>
 				</div>
 
-				<Card className="question-card">
-					<div className="question-image-container">
+				<Card>
+					<div className="flex justify-center bg-slate-900 p-4 rounded-md mb-4">
 						<img
-							src={`/asset/${
-								listTorseurs[questionNumber].folder
-							}/${listTorseurs[questionNumber].fichier.toUpperCase()}`}
+							src={`/asset/${listTorseurs[questionNumber].folder}/${listTorseurs[questionNumber].fichier.toUpperCase()}`}
 							alt="Torseur"
-							className="question-image"
+							className="max-h-64 object-contain"
 						/>
 					</div>
 
-					<div className="question-form">
+					<div className="flex flex-col gap-3">
 						<Select
 							label="Type de liaison"
 							value={selectedValue}
-							onChange={(e) => setSelectedValue(e.target.value)}
+							onChange={(e) => {
+								setSelectedValue(e.target.value);
+								setAxeValue('');
+								setNormaleValue('');
+							}}
+							disabled={validated}
 						>
 							<option value="" disabled>
 								Selectionner un type de liaison
 							</option>
 							{info_cin.metadata.types_liaisons.map(
-								(type, index) => (
-									<option key={index} value={type}>
-										{type}
+								(t, index) => (
+									<option key={index} value={t}>
+										{t}
 									</option>
 								)
 							)}
 						</Select>
 
 						{AxeLiaisonList.includes(selectedValue) && (
-							<Select label="Axe" id="Axe">
+							<Select
+								label="Axe"
+								value={axeValue}
+								onChange={(e) => setAxeValue(e.target.value)}
+								disabled={validated}
+							>
 								<option value="" disabled>
 									Selectionner un axe
 								</option>
@@ -165,7 +219,14 @@ function Torseur() {
 						)}
 
 						{NormaleLiaisonList.includes(selectedValue) && (
-							<Select label="Normale" id="Normale">
+							<Select
+								label="Normale"
+								value={normaleValue}
+								onChange={(e) =>
+									setNormaleValue(e.target.value)
+								}
+								disabled={validated}
+							>
 								<option value="" disabled>
 									Selectionner une normale
 								</option>
@@ -176,127 +237,45 @@ function Torseur() {
 						)}
 					</div>
 
-					<p id="rep" className="feedback-message"></p>
-
-					<div className="quiz-actions">
-						<Button
-							id="validate-button"
-							fullWidth
-							onClick={(el) => {
-								const repEl = document.getElementById(
-									'rep'
-								) as HTMLParagraphElement;
-								const axe = (
-									document.getElementById(
-										'Axe'
-									) as HTMLSelectElement
-								)?.value;
-								const normal = (
-									document.getElementById(
-										'Normale'
-									) as HTMLSelectElement
-								)?.value;
-								const repVal = verifierReponse(
-									listTorseurs[questionNumber],
-									{
-										axe: axe,
-										normal: normal,
-										type: selectedValue,
-									}
-								);
-								if (repVal) {
-									setPoint(point + 1);
-									repEl.className =
-										'feedback-message correct-answer';
-									repEl.innerText = 'Bonne réponse !';
-									repEl.style.color = ''; // Reset inline color if any
-								} else {
-									repEl.className =
-										'feedback-message wrong-answer';
-									repEl.innerText = `Mauvaise réponse ! La bonne réponse était : ${
-										listTorseurs[questionNumber]
-											.type_liaison
-									} ${
-										listTorseurs[questionNumber].axe
-											? 'avec axe ' +
-												listTorseurs[questionNumber].axe
-											: ''
-									} ${
-										listTorseurs[questionNumber].normale
-											? 'et normale ' +
-												listTorseurs[questionNumber]
-													.normale
-											: ''
-									}.`;
-									repEl.style.color = ''; // Reset inline color
-								}
-								el.currentTarget.disabled = true;
-								el.currentTarget.style.display = 'none';
-								const confirmButton = document.getElementById(
-									'confirm-button'
-								) as HTMLButtonElement;
-								confirmButton.style.display = 'inline-block';
-							}}
+					{feedback && (
+						<p
+							className={`text-center font-semibold mt-3 ${
+								feedback.correct
+									? 'text-emerald-500'
+									: 'text-red-500'
+							}`}
 						>
-							Valider la réponse
-						</Button>
+							{feedback.message}
+						</p>
+					)}
 
-						<Button
-							id="confirm-button"
-							variant="primary"
-							fullWidth
-							style={{ display: 'none' }}
-							className="validate-button confirm-button"
-							onClick={() => {
-								if (questionNumber < 9) {
-									// Réinitialiser tous les selects
-									const axeSelect = document.getElementById(
-										'Axe'
-									) as HTMLSelectElement;
-									const normaleSelect =
-										document.getElementById(
-											'Normale'
-										) as HTMLSelectElement;
-									if (axeSelect) axeSelect.value = '';
-									if (normaleSelect) normaleSelect.value = '';
-
-									// Réinitialiser le message de réponse
-									const repEl = document.getElementById(
-										'rep'
-									) as HTMLParagraphElement;
-									repEl.innerText = '';
-									repEl.className = 'feedback-message';
-
-									// Réafficher le bouton valider et cacher le bouton confirmer
-									const validateButton =
-										document.getElementById(
-											'validate-button'
-										) as HTMLButtonElement;
-									const confirmButton =
-										document.getElementById(
-											'confirm-button'
-										) as HTMLButtonElement;
-									validateButton.disabled = false;
-									validateButton.style.display =
-										'inline-block';
-									confirmButton.style.display = 'none';
-
-									// Passer à la question suivante
-									setQuestionNumber(questionNumber + 1);
-									setSelectedValue('');
-								} else {
-									navigate(
-										`/finish?score=${point}&total=10&quiz=torseurs`
-									);
-								}
-							}}
-						>
-							Prochaine question
-						</Button>
+					<div className="mt-4 flex flex-col gap-3">
+						{!validated ? (
+							<Button
+								id="validate-button"
+								fullWidth
+								disabled={!selectedValue}
+								onClick={handleValidate}
+							>
+								Valider la réponse
+							</Button>
+						) : (
+							<Button
+								id="confirm-button"
+								variant="primary"
+								fullWidth
+								onClick={handleNext}
+							>
+								{questionNumber < listTorseurs.length - 1
+									? 'Prochaine question'
+									: 'Voir le résultat'}
+							</Button>
+						)}
 					</div>
 				</Card>
 			</div>
 		</Layout>
 	);
 }
+
 export default Torseur;
